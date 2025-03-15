@@ -7,7 +7,7 @@
 
 
 body
-.header-section {
+.Dine-home {
   background-image: url(./assets/images/homepage/hero-bg-mobile@2x.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,13 +16,57 @@ body
 }
 
 
+ .tablet img , .desktop img {
+  max-width: 100%;
+  width: 50%;
+}
+
+.mobile img {
+  width: 75%;
+}
+
+.mobile {
+  display: block;
+}
+
+.tablet, .desktop {
+  display: none
+}
+
+
+.line-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bubble {
+  color: #B54949;
+}
+
+.line {
+  margin-left: 1.2em;
+  width: 55px;
+  height: 1px;
+  background-color: #B54949;
+}
+
+
 
 @media (min-width: 600px)  {
   
 body
-.header-section {
+.Dine-home {
   background-image: url(./assets/images/homepage/hero-bg-tablet@2x.jpg);
  
+}
+
+.tablet {
+  display: block;
+}
+
+.mobile {
+  display: none;
 }
 
 
@@ -32,11 +76,19 @@ body
 @media (min-width: 1200px)  {
   
   body
-  .header-section {
+  .Dine-home {
     background-image: url(./assets/images/homepage/hero-bg-desktop@2x.jpg);
 
   }
   
+
+  .mobile, .tablet {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
   
   }
 
