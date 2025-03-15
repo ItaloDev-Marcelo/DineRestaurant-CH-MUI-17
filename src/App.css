@@ -22,10 +22,7 @@ body
 body
 .header-section {
   background-image: url(./assets/images/homepage/hero-bg-tablet@2x.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
+ 
 }
 
 
@@ -37,10 +34,7 @@ body
   body
   .header-section {
     background-image: url(./assets/images/homepage/hero-bg-desktop@2x.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
+
   }
   
   
