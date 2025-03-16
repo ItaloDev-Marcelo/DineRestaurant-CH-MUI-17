@@ -23,6 +23,7 @@ body
 
 .mobile img {
   width: 75%;
+  box-shadow: -5px 44px 57px -26px rgba(0,0,0,0.47);
 }
 
 .mobile {
@@ -58,6 +59,8 @@ body
 body
 .Dine-home {
   background-image: url(./assets/images/homepage/hero-bg-tablet@2x.jpg);
+  height: 984px;
+  width: 100%;
  
 }
 
