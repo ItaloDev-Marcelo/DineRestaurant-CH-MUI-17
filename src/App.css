@@ -6,10 +6,15 @@
 }
 
 
+body {
+  overflow-x: hidden;
+}
+
 body
 .Dine-home {
   background-image: url(./assets/images/homepage/hero-bg-mobile@2x.jpg);
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   height: 100vh;
   width: 100vw;
@@ -54,6 +59,8 @@ body
 
 
 
+
+
 @media (min-width: 600px)  {
   
 body
@@ -83,6 +90,13 @@ body
     background-image: url(./assets/images/homepage/hero-bg-desktop@2x.jpg);
     height: 100vh;
   }
+
+  .desktop img {
+    max-width: 100%;
+    width: 70%;
+  }
+  
+
   
 
   .mobile, .tablet {
@@ -92,7 +106,14 @@ body
   .desktop {
     display: block;
   }
+
   
+
+  .line-image {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 4.5em;
+  }
   }
 
 

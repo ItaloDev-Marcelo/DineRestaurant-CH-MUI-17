@@ -27,45 +27,52 @@ export default function AboutUs() {
  
 
   return (
-    <Stack component='section' className="Travel-plates" padding='1em' textAlign='center' 
+    <Stack component='section' className="Travel-plates"
+    padding={{xs: '1em', lg: '1em 5em'}} textAlign={{xs: 'center' , lg: 'left'}}
      >
-       <Stack component='article'  flexDirection={{lg: 'row'}} sx={{position: 'relative', top: '-5em'}} justifyContent='center' alignItems='center'>
-              <Box className='mobile reveal'  >
+
+
+       <Stack component='article'   display={'flex'}
+        flexDirection={{lg: 'row'}} sx={{position: 'relative', top: '-5em', left: {lg: '4.5em'},
+          justifyContent:'center',  alignItems:'center'}} >
+              <Box component='div' className='mobile reveal'  >
               <img src={CheepImage1} alt="" />
               </Box>
-              <Box className='tablet reveal' >
+              <Box  component='div' className='tablet reveal' >
               <img src={CheepImage2} alt="" />
               </Box>
-              <Box className='desktop reveal' >
+              <Box  component='div' className='desktop reveal' >
               <img src={CheepImage3} alt="" />
               </Box>
-          <Stack component='div' className="reveal" margin='1em 0' maxWidth='500px' >
-              <Box className='line-image'position='relative'>
+          <Stack component='div' className="reveal" margin='1em 0' maxWidth='500px' position='relative' left={{lg: '-12em'}} >
+              <Box className='line-image'>
                  <Box className='bubble'>○</Box>
                  <Box className='line'></Box>
               </Box>
               <Typography component='h2' fontSize={{xs: '2em',md: '3em', lg: '3em'}} padding='0 1.5em' margin='1em 0'>Enjoyable place for all the family </Typography>
-              <Typography component='p' padding={{xs: '0 1.4em', md: '0 3.5em'}}  margin='.5em 0' >Our relaxed surroundings make dining with us a great experience for everyone. We can even arrange 
+              <Typography component='p' padding={{xs: '0 1.4em', md: '0 3.5em', lg: '0 4em'}} margin={{xs: '.5em 0', lg: '0.5em 0 .5em .5em'}}  >Our relaxed surroundings make dining with us a great experience for everyone. We can even arrange 
               a tour of the farm before your meal.</Typography>
           </Stack>
        </Stack>
-       <Stack component='article' flexDirection={{lg: 'row-reverse'}} justifyContent='center' alignItems='center' >
-          <Box className='mobile reveal'>
+
+
+       <Stack component='article'   display='flex' flexDirection={{lg: 'row-reverse'}}   justifyContent={{xs: 'center', lg: 'flex-end'}} alignItems='center'   >
+              <Box className='mobile reveal'>
               <img src={FoodPlate1} alt="" />
               </Box>
               <Box className='tablet reveal'>
               <img src={FoodPlate2} alt="" />
               </Box>
-              <Box className='desktop reveal'>
+              <Box className='desktop reveal' position='relative' right='-10em'>
               <img src={FoodPlate3} alt="" />
               </Box>
-          <Stack component='div' className="reveal"  margin='1em 0' maxWidth='500px'>
+          <Stack component='div' className="reveal"  margin={{xs: '1em 0', lg: '0'}} maxWidth='500px'>
               <Box className='line-image' position='relative'>
               <Box className='bubble'>○</Box>
               <Box className='line'></Box>
               </Box>
               <Typography component='h2' fontSize={{xs: '2em',md: '3em', lg: '3em'}} padding='0 1.5em' margin='1em 0'>The most locally sourced food</Typography>
-              <Typography component='p' padding={{xs: '0 1.4em', md: '0 3.5em'}} margin='.5em 0' >All our ingredients come directly from our farm or local fishery. So you can be sure that you’re 
+              <Typography component='p' padding={{xs: '0 1.4em', md: '0 3.5em' , lg: '0 4em'}} margin={{xs: '.5em 0', lg: '0.5em 0 .5em .5em'}} >All our ingredients come directly from our farm or local fishery. So you can be sure that you’re 
               eating the freshest, most sustainable food.</Typography>
           </Stack>
        </Stack>

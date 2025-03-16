@@ -2,6 +2,7 @@
 import './App.css'
 import AboutUs from './Pages/AboutUs'
 import Home from './Pages/Home'
+import MenuSection from './Pages/MenuSection'
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
      <Home/>
      <main>
         <AboutUs/>
+        <MenuSection/>
      </main>
     </>
   )
