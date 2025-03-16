@@ -81,7 +81,7 @@ body
   body
   .Dine-home {
     background-image: url(./assets/images/homepage/hero-bg-desktop@2x.jpg);
-
+    height: 100vh;
   }
   
 
