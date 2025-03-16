@@ -46,6 +46,11 @@ body
   align-items: center;
 }
 
+.line-row {
+   display: flex;
+   align-items: center;
+}
+
 .bubble {
   color: #B54949;
 }
@@ -57,7 +62,21 @@ body
   background-color: #B54949;
 }
 
+.list-info h3 {
+  font-weight: 700;
+  margin: 1em 0 ;
+}
 
+.list-info p {
+  padding: 0 2em;
+}
+
+hr {
+  align-self: center;
+  width: 75%;
+  margin: 1em 0;
+  opacity: .2;
+}
 
 
 
@@ -97,6 +116,20 @@ body
   }
   
 
+  hr {
+    align-self: center;
+    width: 100%;
+    margin: 1em 0;
+  }
+
+  .list-info h3 {
+    font-weight: 700;
+    margin: 0 0 1em 0 ;
+  }
+  
+  .list-info p {
+    padding: 0 ;
+  }
   
 
   .mobile, .tablet {

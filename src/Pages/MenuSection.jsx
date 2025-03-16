@@ -1,4 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
+import ScrollReveal from "scrollreveal";
+import { useEffect } from "react";
 
 import Salmon0 from '../assets/images/homepage/salmon-mobile@2x.jpg';
 import Salmon1 from '../assets/images/homepage/salmon-desktop-tablet@2x.jpg';
@@ -9,23 +11,45 @@ import Beef1 from '../assets/images/homepage/beef-desktop-tablet@2x.jpg';
 import Snack0 from '../assets/images/homepage/chocolate-mobile@2x.jpg';
 import Snack1 from '../assets/images/homepage/chocolate-desktop-tablet@2x.jpg';
 
+
+
 export default function MenuSection() {
+
+      useEffect(() => {
+        ScrollReveal().reveal(".revealLeft", {
+          distance: "5px",
+          duration: 1000,
+          easing: "ease-in-out",
+          origin: "left",
+          reset: true, // Se quiser que a animação ocorra toda vez que o elemento entrar na tela
+        });
+
+        ScrollReveal().reveal(".revealRight", {
+            distance: "5px",
+            duration: 2000,
+            easing: "ease-in-out",
+            origin: "right",
+            reset: true, // Se quiser que a animação ocorra toda vez que o elemento entrar na tela
+          });
+       }, []) 
+
+
     return (
-        <Stack>
-            <Stack className='menuHeader--info'>
-                <Box className='line-image'>
+        <Stack display='flex' flexDirection={{xs: 'column', lg: 'row'}} sx={{background: '  #101010;',color: 'white', justifyContent: 'center', padding: {xs: '4em 1em', lg:  '10em 7em'}}}>
+            <Stack className='menuHeader--info revealLeft' textAlign={{xs: 'center', lg: 'left'}} padding='1em 1.5em' >
+                <Box className='line-row'>
                     <Box className='bubble'>○</Box>
                     <Box className='line'></Box>
                 </Box>
-                <Typography component='h2' >A few highlights from our menu</Typography>
-                <Typography component='p'  >We cater for all dietary requirements, but here’s a glimpse at some of our diner’s favourites.
+                <Typography component='h2' fontSize={{xs:'2em', lg: '3.1em'}} margin='1em 0 .5em 0' >A few highlights from our menu</Typography>
+                <Typography component='p' margin='1em 0 4em 0' maxWidth={{lg: '350px'}} lineHeight={{lg: '2em'}} >We cater for all dietary requirements, but here’s a glimpse at some of our diner’s favourites.
                     Our menu is revamped every season.</Typography>
 
             </Stack>
 
 
-            <Stack className="foodList">
-                <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+            <Stack className="foodList" padding={{lg: '4em 6em'}} display='flex' flexDirection='column'>
+                <Box className='revealRight' sx={{ display: 'flex', flexDirection: {xs: 'column', lg: 'row'}, textAlign: {xs: 'center', lg: 'left'} }}>
                     <Box className='image-container'>
                         <Box className='mobile'>
                             <img src={Salmon0} alt="" />
@@ -41,7 +65,7 @@ export default function MenuSection() {
                     </Box>
                 </Box>
                 <hr />
-                <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+                <Box className='revealRight' sx={{ display: 'flex',  flexDirection: {xs: 'column', lg: 'row'}, textAlign: {xs: 'center', lg: 'left'} }}>
                 <Box className='image-container'>
                         <Box className='mobile'>
                             <img src={Beef0} alt="" />
@@ -57,7 +81,7 @@ export default function MenuSection() {
                     </Box>
                 </Box>
                 <hr />
-                <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+                <Box className='revealRight' sx={{ display: 'flex', flexDirection: {xs: 'column', lg: 'row'},textAlign: {xs: 'center', lg: 'left'}  }}>
                 <Box className='image-container'>
                         <Box className='mobile'>
                             <img src={ Snack0} alt="" />

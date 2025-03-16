@@ -63,7 +63,7 @@ export default function AboutUs() {
               <Box className='tablet reveal'>
               <img src={FoodPlate2} alt="" />
               </Box>
-              <Box className='desktop reveal' position='relative' right='-10em'>
+              <Box className='desktop reveal' position='relative' top='5em' right='-10em'>
               <img src={FoodPlate3} alt="" />
               </Box>
           <Stack component='div' className="reveal"  margin={{xs: '1em 0', lg: '0'}} maxWidth='500px'>
