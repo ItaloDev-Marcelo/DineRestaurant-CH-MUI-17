@@ -40,16 +40,13 @@ body
 }
 
 
-.line-image {
+.line-image, .line-row {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.line-row {
-   display: flex;
-   align-items: center;
-}
+
 
 .bubble {
   color: #B54949;
@@ -120,6 +117,10 @@ body
     align-self: center;
     width: 100%;
     margin: 1em 0;
+  }
+
+  .line-row {
+    justify-content: flex-start;
   }
 
   .list-info h3 {

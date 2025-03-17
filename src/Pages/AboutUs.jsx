@@ -45,7 +45,7 @@ export default function AboutUs() {
               <img src={CheepImage3} alt="" />
               </Box>
           <Stack component='div' className="reveal" margin='1em 0' maxWidth='500px' position='relative' left={{lg: '-12em'}} >
-              <Box className='line-image'>
+              <Box className='line-image' >
                  <Box className='bubble'>○</Box>
                  <Box className='line'></Box>
               </Box>
