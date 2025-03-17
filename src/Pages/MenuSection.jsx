@@ -35,7 +35,7 @@ export default function MenuSection() {
 
 
     return (
-        <Stack display='flex' flexDirection={{xs: 'column', lg: 'row'}} sx={{background: '  #101010;',color: 'white', justifyContent: 'center', padding: {xs: '4em 1em', lg:  '10em 7em'}}}>
+        <Stack display='flex' flexDirection={{xs: 'column', lg: 'row'}} sx={{background: '  #101010;',color: 'white', justifyContent: 'center', padding: {xs: '4em 1em', lg:  '10em 7em 2.5em 7em'}}}>
             <Stack className='menuHeader--info revealLeft' textAlign={{xs: 'center', lg: 'left'}} padding='1em 1.5em' >
                 <Box className='line-row'>
                     <Box className='bubble'>○</Box>

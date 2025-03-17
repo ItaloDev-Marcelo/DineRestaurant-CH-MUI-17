@@ -33,9 +33,9 @@ export default function BookATableSection() {
 
 
   return (
-    <Stack component='section'my='4em'  >
-      <Stack className='slideArea-section reveal' component='div' display='flex' flexDirection='column'  textAlign={{xs: 'center', lg: 'left'}}   >
-       <Stack className='slideArea-01 ' display={slideItem === 'Slider-one'  ? 'flex' : 'none'} >
+    <Stack component='section'my='4em'  padding={{xs: '0' , lg: '4em 2.5em'}} display='flex' flexDirection={{xs: 'column', lg: 'row'}} >
+      <Stack className='slideArea-section reveal'  component='div' display='flex'    textAlign={{xs: 'center', lg: 'left'}} position='relative' left={{lg: '5em' }}   >
+       <Stack className='slideArea-01 ' display={slideItem === 'Slider-one'  ? 'flex' : 'none'} flexDirection={{xs: 'column', lg: 'row'}}  >
        <Stack component='picture' >
           <Box component='div' className='mobile '  >
             <img src={Gt0} alt="" />
@@ -47,15 +47,10 @@ export default function BookATableSection() {
             <img src={Gt2} alt="" />
           </Box>
         </Stack>
-        <Stack marginTop='3em' >
-        <Button sx={{background: 'trasparent', border: 'none'}} onClick={() => setSlideItem('Slider-one')} >Family Gathering</Button>
-        <Button sx={{background: 'trasparent', border: 'none'}}  onClick={() => setSlideItem('Slider-two')}>Special Events</Button>
-        <Button sx={{background: 'trasparent', border: 'none'}}  onClick={() => setSlideItem('Slider-three')}>Social Events</Button>
-        </Stack>
+        
         </Stack>
 
-
-       <Stack className='slideArea-02 ' display={slideItem === 'Slider-two'  ? 'flex' : 'none'}>
+       <Stack className='slideArea-02 ' display={slideItem === 'Slider-two'  ? 'flex' : 'none'} flexDirection={{xs: 'column', lg: 'row'}}>
        <Stack component='picture' >
           <Box component='div' className='mobile '  >
             <img src={SpEvents0} alt="" />
@@ -67,14 +62,10 @@ export default function BookATableSection() {
             <img src={SpEvents2} alt="" />
           </Box>
         </Stack>
-        <Stack marginTop='3em' >
-        <Button sx={{background: 'trasparent', border: 'none'}} onClick={() => setSlideItem('Slider-one')} >Family Gathering</Button>
-        <Button sx={{background: 'trasparent', border: 'none'}}  onClick={() => setSlideItem('Slider-two')}>Special Events</Button>
-        <Button sx={{background: 'trasparent', border: 'none'}}  onClick={() => setSlideItem('Slider-three')}>Social Events</Button>
-        </Stack>
+      
         </Stack>
 
-       <Stack className='slideArea-03 ' display={slideItem === 'Slider-three'  ? 'flex' : 'none'}>
+       <Stack className='slideArea-03 ' display={slideItem === 'Slider-three'  ? 'flex' : 'none'} flexDirection={{xs: 'column', lg: 'row'}}>
        <Stack component='picture' >
           <Box component='div' className='mobile '  >
             <img src={SpE0} alt="" />
@@ -86,39 +77,62 @@ export default function BookATableSection() {
             <img src={SpE2} alt="" />
           </Box>
         </Stack>
-        <Stack marginTop='3em' >
-        <Button sx={{background: 'trasparent', border: 'none'}} onClick={() => setSlideItem('Slider-one')} >Family Gathering</Button>
-        <Button sx={{background: 'trasparent', border: 'none'}}  onClick={() => setSlideItem('Slider-two')}>Special Events</Button>
-        <Button sx={{background: 'trasparent', border: 'none'}}  onClick={() => setSlideItem('Slider-three')}>Social Events</Button>
-        </Stack>
+     
        </Stack>
        
 
       </Stack>
 
+      <Stack className='slideArea-section-info reveal ' position='relative' left={{lg: '-5em' }} display='flex' textAlign={{xs: 'center', lg: 'left'}}  >
+        <Stack component='div' display={slideItem === 'Slider-one'  ? 'flex' : 'none'} padding='1.5em 4em' alignItems={{xs: 'center', lg: 'flex-start'}} flexDirection={{lg:'column-reverse'}} >
+        
+        <Stack marginTop='3em' spacing={1} alignItems={{lg: 'flex-start'}} >
+        <Button sx={{background: 'trasparent', border: 'none'}} className='btn0 active' onClick={() => setSlideItem('Slider-one')} >Family Gathering </Button>
+        <Button sx={{background: 'trasparent', border: 'none'}} className='btn1 ' onClick={() => setSlideItem('Slider-two')}>Special Events</Button>
+        <Button sx={{background: 'trasparent', border: 'none'}} className='btn2 ' onClick={() => setSlideItem('Slider-three')}>Social Events</Button>
+        </Stack>
 
-      <Stack className='slideArea-section-info reveal ' display='flex' flexDirection='column'  textAlign={{xs: 'center', lg: 'left'}} >
-        <Stack component='div' display={slideItem === 'Slider-one'  ? 'flex' : 'none'} padding='1.5em 4em' alignItems='center'  >
-          <Typography component='h4'>Family Gathering</Typography>
+        <Stack>
+        <Typography component='h4'>Family Gathering</Typography>
           <Typography component='p'>We love catering for entire families. So please bring everyone along for a special meal with your 
           loved ones. We’ll provide a memorable experience for all.</Typography>
-          <Button sx={{ background: 'black', width: '200px', height: '50px', fontWeight: '600', position: 'relative', top: '2em', border: 'none', color: 'white', '&:hover': { background: 'white', color: 'black' } }}>Book a table</Button>
+          <Button sx={{ background: 'black', width: '200px', height: '50px', fontWeight: '600', position: 'relative', top: '2em', border: 'none', color: 'white', '&:hover': { background: 'white', color: 'black' }, alignSelf: {xs: 'center', lg: 'flex-start'}}}>Book a table</Button>
+   
+        </Stack>
+       
+              </Stack>
+
+        <Stack component='div' display={slideItem === 'Slider-two'  ? 'flex' : 'none' }padding='1.5em 4em' alignItems={{xs: 'center', lg: 'flex-start'}}  flexDirection={{lg:'column-reverse'}}  >
+        <Stack marginTop='3em' spacing={1} alignItems={{lg: 'flex-start'}}>
+        <Button sx={{background: 'trasparent', border: 'none'}} className='btn0 ' onClick={() => setSlideItem('Slider-one')} >Family Gathering </Button>
+        <Button sx={{background: 'trasparent', border: 'none'}} className='btn1 active' onClick={() => setSlideItem('Slider-two')}>Special Events</Button>
+        <Button sx={{background: 'trasparent', border: 'none'}} className='btn2  ' onClick={() => setSlideItem('Slider-three')}>Social Events</Button>
         </Stack>
 
-        <Stack component='div' display={slideItem === 'Slider-two'  ? 'flex' : 'none' }padding='1.5em 4em' alignItems='center'    >
-          <Typography component='h4'>Special Events</Typography>
+        <Stack>
+        <Typography component='h4'>Special Events</Typography>
           <Typography component='p'>Whether it’s a romantic dinner or special date you’re celebrating with others we’ll look after you. 
           We’ll be sure to mark your special date with an unforgettable meal.</Typography>
-          <Button sx={{ background: 'black', width: '200px', height: '50px', fontWeight: '600', position: 'relative', top: '2em', border: 'none', color: 'white', '&:hover': { background: 'white', color: 'black' } }}>Book a table</Button> 
+          <Button sx={{ background: 'black', width: '200px', height: '50px', fontWeight: '600', position: 'relative', top: '2em', border: 'none', color: 'white', '&:hover': { background: 'white', color: 'black' },  alignSelf: {xs: 'center', lg: 'flex-start'} }}>Book a table</Button> 
+       
         </Stack>
+         </Stack>
 
 
-        <Stack component='div' display={slideItem === 'Slider-three'  ? 'flex' : 'none'} padding='1.5em 4em'  alignItems='center'   >
-          <Typography component='h4'>Social Events</Typography>
+        <Stack component='div' display={slideItem === 'Slider-three'  ? 'flex' : 'none'} padding='1.5em 4em'  alignItems={{xs: 'center', lg: 'flex-start'}} flexDirection={{lg:'column-reverse'}}   >
+        <Stack marginTop='3em' spacing={1} alignItems={{lg: 'flex-start'}} >
+        <Button sx={{background: 'trasparent', border: 'none'}} className='btn0 ' onClick={() => setSlideItem('Slider-one')} >Family Gathering </Button>
+        <Button sx={{background: 'trasparent', border: 'none'}} className='btn1 ' onClick={() => setSlideItem('Slider-two')}>Special Events</Button>
+        <Button sx={{background: 'trasparent', border: 'none'}} className='btn2 active' onClick={() => setSlideItem('Slider-three')}>Social Events</Button>
+        </Stack>
+        <Stack >
+        <Typography component='h4'>Social Events</Typography>
           <Typography component='p'>Are you looking to have a larger social event? No problem! We’re more than happy to cater for big
           parties. We’ll work with you to make your event a hit with everyone.</Typography>
-          <Button sx={{ background: 'black', width: '200px', height: '50px', fontWeight: '600', position: 'relative', top: '2em', border: 'none', color: 'white', '&:hover': { background: 'white', color: 'black' } }}>Book a table</Button>
+          <Button sx={{ background: 'black', width: '200px', height: '50px', fontWeight: '600', position: 'relative', top: '2em', border: 'none', color: 'white', '&:hover': { background: 'white', color: 'black' },  alignSelf: {xs: 'center', lg: 'flex-start'} }}>Book a table</Button>
+       
         </Stack>
+         </Stack>
       </Stack>
     </Stack>
   )
