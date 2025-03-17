@@ -22,7 +22,7 @@ export default function BookATableSection() {
      useEffect(() => {
       ScrollReveal().reveal(".reveal", {
         distance: "5px",
-        duration: 1000,
+        duration: 2000,
         easing: "ease-in-out",
         origin: "left",
         reset: true, // Se quiser que a animação ocorra toda vez que o elemento entrar na tela
@@ -97,7 +97,7 @@ export default function BookATableSection() {
       </Stack>
 
 
-      <Stack className='slideArea-section-info ' display='flex' flexDirection='column'  textAlign={{xs: 'center', lg: 'left'}} >
+      <Stack className='slideArea-section-info reveal ' display='flex' flexDirection='column'  textAlign={{xs: 'center', lg: 'left'}} >
         <Stack component='div' display={slideItem === 'Slider-one'  ? 'flex' : 'none'} padding='1.5em 4em' alignItems='center'  >
           <Typography component='h4'>Family Gathering</Typography>
           <Typography component='p'>We love catering for entire families. So please bring everyone along for a special meal with your 
