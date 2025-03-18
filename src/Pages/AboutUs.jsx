@@ -38,9 +38,7 @@ export default function AboutUs() {
               <Box component='div' className='mobile reveal'  >
               <img src={CheepImage1} alt="" />
               </Box>
-              <Box  component='div' className='tablet reveal' >
-              <img src={CheepImage2} alt="" />
-              </Box>
+              
               <Box  component='div' className='desktop reveal' >
               <img src={CheepImage3} alt="" />
               </Box>
@@ -60,9 +58,7 @@ export default function AboutUs() {
               <Box className='mobile reveal'>
               <img src={FoodPlate1} alt="" />
               </Box>
-              <Box className='tablet reveal'>
-              <img src={FoodPlate2} alt="" />
-              </Box>
+            
               <Box className='desktop reveal' position='relative' top='5em' right='-10em'>
               <img src={FoodPlate3} alt="" />
               </Box>

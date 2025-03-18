@@ -8,8 +8,8 @@ export default function Rodape()  {
    useEffect(() => {
         ScrollReveal().reveal(".reveal", {
           distance: "5px",
-          duration: 2000,
-          easing: "ease-in-out",
+          duration: 1000,
+          easing: "ease-in",
           origin: "left",
           reset: true, // Se quiser que a animação ocorra toda vez que o elemento entrar na tela
         });
@@ -17,7 +17,7 @@ export default function Rodape()  {
     
   return (
     <Stack component='footer'  padding={{xs: '2em', lg: '4em 2em'}} sx={{background: 'hsl(0, 0.00%, 6.30%);',color: 'white', display: 'flex',textAlign: {xs: 'center', lg: 'left'}, flexDirection: {lg: 'row'}}} >
-      <Stack component='div' className='reveal'  marginLeft={{xs: '.5em' , md: '7em', lg: '6em'}} width={{xs: '25%',sm: '15%', lg: '10%'}} alignSelf={{xs: 'center', lg: 'flex-start'}} margin='1em 7em 0 5em'>
+      <Stack component='div' className='reveal'  marginLeft={{xs: '7em' , md: '7em', lg: '6em'}} width={{xs: '30%',sm: '15%', lg: '10%'}} alignSelf={{xs: 'center', lg: 'flex-start'}} margin='1em 7em 0 5em'>
         <img src={Logo} alt='logo' />
       </Stack>
       <Stack display='flex' flexDirection={{xs: 'column', lg: 'row'}} >
