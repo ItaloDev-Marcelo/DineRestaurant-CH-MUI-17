@@ -303,6 +303,10 @@ picture div img  {
   
     color: gainsboro !important;
   }
+
+  picture div img  {
+    width: 100% !important;
+  }
   
 
   .btn0.active {
@@ -335,9 +339,12 @@ picture div img  {
     font-weight: 500 !important;
   }
 
+
   .slideArea-section-info p {
     max-width: 500px;
   }
+
+  
 
 
 }
@@ -356,12 +363,8 @@ picture div img  {
    margin-top: 4em !important;
   }
 
-  picture div img  {
-    width: 100% !important;
-  }
 
-  .book {
-    
-  }
+
+  
   
 }
