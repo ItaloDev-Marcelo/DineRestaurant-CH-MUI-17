@@ -49,14 +49,14 @@ export default function AboutUs() {
                  <Box className='bubble'>○</Box>
                  <Box className='line'></Box>
               </Box>
-              <Typography component='h2' fontSize={{xs: '2em',md: '3em', lg: '3em'}} padding='0 1.5em' margin='1em 0'>Enjoyable place for all the family </Typography>
-              <Typography component='p' padding={{xs: '0 1.4em', md: '0 3.5em', lg: '0 4em'}} margin={{xs: '.5em 0', lg: '0.5em 0 .5em .5em'}}  >Our relaxed surroundings make dining with us a great experience for everyone. We can even arrange 
+              <Typography component='h2' fontSize={{xs: '2em',md: '3em', lg: '3.2em'}} padding='0 1.5em' margin='.5em 0 1em 0'>Enjoyable place for all the family </Typography>
+              <Typography component='p' color='#4C4C4' padding={{xs: '0 1.4em', md: '0 3.5em', lg: '0 4em'}} margin={{xs: '.5em 0 .5em 0', lg: '-1.5em 0 .5em .5em'}} fontSize={{xs: '1.3em', sm: '1.1em'}}  >Our relaxed surroundings make dining with us a great experience for everyone. We can even arrange 
               a tour of the farm before your meal.</Typography>
           </Stack>
        </Stack>
 
 
-       <Stack component='article'   display='flex' flexDirection={{lg: 'row-reverse'}}   justifyContent={{xs: 'center', lg: 'flex-end'}} alignItems='center'   >
+       <Stack component='article'  display='flex' flexDirection={{lg: 'row-reverse'}}   justifyContent={{xs: 'center', lg: 'flex-end'}} alignItems='center'   >
               <Box className='mobile reveal'>
               <img src={FoodPlate1} alt="" />
               </Box>
@@ -72,7 +72,7 @@ export default function AboutUs() {
               <Box className='line'></Box>
               </Box>
               <Typography component='h2' fontSize={{xs: '2em',md: '3em', lg: '3em'}} padding='0 1.5em' margin='1em 0'>The most locally sourced food</Typography>
-              <Typography component='p' padding={{xs: '0 1.4em', md: '0 3.5em' , lg: '0 4em'}} margin={{xs: '.5em 0', lg: '0.5em 0 .5em .5em'}} >All our ingredients come directly from our farm or local fishery. So you can be sure that you’re 
+              <Typography component='p' color='#4C4C4' padding={{xs: '0 1.4em', md: '0 3.5em' , lg: '0 4em'}} margin={{xs: '.5em 0', lg: '-1.5em 0 .5em 0'}}  fontSize={{xs: '1.3em', sm: '1.2em'}} >All our ingredients come directly from our farm or local fishery. So you can be sure that you’re 
               eating the freshest, most sustainable food.</Typography>
           </Stack>
        </Stack>
