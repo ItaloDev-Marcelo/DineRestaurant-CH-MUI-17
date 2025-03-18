@@ -86,7 +86,7 @@ export default function BookATableSection() {
       <Stack className='slideArea-section-info reveal ' position='relative' left={{lg: '-5em' }} display='flex' textAlign={{xs: 'center', lg: 'left'}}  >
         <Stack component='div' display={slideItem === 'Slider-one'  ? 'flex' : 'none'} padding='1.5em 4em' alignItems={{xs: 'center', lg: 'flex-start'}} flexDirection={{lg:'column-reverse'}} >
         
-        <Stack marginTop='3em' spacing={1} alignItems={{lg: 'flex-start'}} >
+        <Stack marginTop='3em' spacing={1} flexDirection={{sm: 'row', lg: 'column'}} alignItems={{lg: 'flex-start'}} >
         <Button sx={{background: 'trasparent', border: 'none'}} className='btn0 active' onClick={() => setSlideItem('Slider-one')} >Family Gathering </Button>
         <Button sx={{background: 'trasparent', border: 'none'}} className='btn1 ' onClick={() => setSlideItem('Slider-two')}>Special Events</Button>
         <Button sx={{background: 'trasparent', border: 'none'}} className='btn2 ' onClick={() => setSlideItem('Slider-three')}>Social Events</Button>
@@ -103,7 +103,7 @@ export default function BookATableSection() {
               </Stack>
 
         <Stack component='div' display={slideItem === 'Slider-two'  ? 'flex' : 'none' }padding='1.5em 4em' alignItems={{xs: 'center', lg: 'flex-start'}}  flexDirection={{lg:'column-reverse'}}  >
-        <Stack marginTop='3em' spacing={1} alignItems={{lg: 'flex-start'}}>
+        <Stack marginTop='3em' spacing={1} flexDirection={{sm: 'row', lg: 'column'}}  alignItems={{lg: 'flex-start'}}>
         <Button sx={{background: 'trasparent', border: 'none'}} className='btn0 ' onClick={() => setSlideItem('Slider-one')} >Family Gathering </Button>
         <Button sx={{background: 'trasparent', border: 'none'}} className='btn1 active' onClick={() => setSlideItem('Slider-two')}>Special Events</Button>
         <Button sx={{background: 'trasparent', border: 'none'}} className='btn2  ' onClick={() => setSlideItem('Slider-three')}>Social Events</Button>
@@ -120,7 +120,7 @@ export default function BookATableSection() {
 
 
         <Stack component='div' display={slideItem === 'Slider-three'  ? 'flex' : 'none'} padding='1.5em 4em'  alignItems={{xs: 'center', lg: 'flex-start'}} flexDirection={{lg:'column-reverse'}}   >
-        <Stack marginTop='3em' spacing={1} alignItems={{lg: 'flex-start'}} >
+        <Stack marginTop='3em' spacing={1}  flexDirection={{sm: 'row', lg: 'column'}} alignItems={{lg: 'flex-start'}} >
         <Button sx={{background: 'trasparent', border: 'none'}} className='btn0 ' onClick={() => setSlideItem('Slider-one')} >Family Gathering </Button>
         <Button sx={{background: 'trasparent', border: 'none'}} className='btn1 ' onClick={() => setSlideItem('Slider-two')}>Special Events</Button>
         <Button sx={{background: 'trasparent', border: 'none'}} className='btn2 active' onClick={() => setSlideItem('Slider-three')}>Social Events</Button>

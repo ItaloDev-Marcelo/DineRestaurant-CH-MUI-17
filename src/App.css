@@ -113,9 +113,7 @@ h5 {
 }
 
 
-footer {
-  height: 200px !important;
-}
+
 
 @media (min-width: 600px)  {
   
@@ -141,6 +139,15 @@ body
 
 .Middle-Page {
   background-image: url(./assets/images/homepage/ready-bg-tablet@2x.jpg);
+}
+
+.btn0.active::before, .btn1.active::before, .btn2.active::before {
+  content: '';
+  position: absolute;
+  top: 3em;
+  width: 10.5%;
+  height: 1px;
+  background-color: #B54949;
 }
 
 
