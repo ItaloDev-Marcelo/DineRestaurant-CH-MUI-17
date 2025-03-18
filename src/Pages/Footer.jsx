@@ -1,12 +1,12 @@
 import React from 'react'
-import Logo from '../assets/images/homepage/logo.svg';
+import Logo from '../assets/images/logo.svg';
 
 import { Stack, Typography, Link } from '@mui/material';
 
 export default function Rodape()  {
   return (
-    <Stack component='footer' >
-      <Stack component='div'>
+    <Stack component='footer' sx={{background: '  #101010;',color: 'white'}} >
+      <Stack component='div' width='25%'>
         <img src={Logo} alt='logo' />
       </Stack>
       <Stack component='div' className='address-area'>

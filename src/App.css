@@ -112,6 +112,11 @@ h5 {
   font-weight: 600 !important;
 }
 
+
+footer {
+  height: 200px !important;
+}
+
 @media (min-width: 600px)  {
   
 body
