@@ -54,7 +54,7 @@ export default function AboutUs() {
        </Stack>
 
 
-       <Stack component='article'  display='flex' flexDirection={{lg: 'row-reverse'}}   justifyContent={{xs: 'center', lg: 'flex-end'}} alignItems='center'   >
+       <Stack component='article' className="L1"  display='flex' flexDirection={{lg: 'row-reverse'}}   justifyContent={{xs: 'center', lg: 'flex-end'}} alignItems='center'   >
               <Box className='mobile reveal'>
               <img src={FoodPlate1} alt="" />
               </Box>

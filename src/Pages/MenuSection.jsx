@@ -41,8 +41,8 @@ export default function MenuSection() {
                     <Box className='bubble'>○</Box>
                     <Box className='line'></Box>
                 </Box>
-                <Typography component='h2' fontSize={{xs:'2em', md: '3em' ,lg: '3.1em'}} margin={{xs: '1em 0 .5em 0', md: '1em 7em .5em 7em', lg: '1em 0 .5em 0'}} >A few highlights from our menu</Typography>
-                <Typography component='p' margin={{xs: '1em 0 4em 0', md: '1em 20em 4em 20em', lg: '1em 0 4em 0',}}  maxWidth={{lg: '350px'}} lineHeight={{lg: '2em'}} >We cater for all dietary requirements, but here’s a glimpse at some of our diner’s favourites.
+                <Typography component='h2' fontSize={{xs:'2em', md: '3em' ,lg: '3.1em'}} margin={{xs: '1em 0 .5em 0', md: '1em 5em .5em 5em', lg: '1em 0 .5em 0'}} >A few highlights from our menu</Typography>
+                <Typography component='p' margin={{xs: '1em 0 4em 0', md: '1em 17em 4em 17em', lg: '1em 0 4em 0',}}  maxWidth={{lg: '350px'}} lineHeight={{lg: '2em'}} >We cater for all dietary requirements, but here’s a glimpse at some of our diner’s favourites.
                     Our menu is revamped every season.</Typography>
 
             </Stack>
@@ -51,10 +51,10 @@ export default function MenuSection() {
             <Stack className="foodList" padding={{md: '4em 6em'}} display='flex' flexDirection='column'>
                 <Box className='revealRight' sx={{ display: 'flex', flexDirection: {xs: 'column', md: 'row'}, textAlign: {xs: 'center', md: 'left'} }}>
                     <Box className='image-container'>
-                        <Box className='mobile'>
+                        <Box className='mobile' zIndex='2 ' position='relative'>
                             <img src={Salmon0} alt="" />
                         </Box>
-                        <Box className='tablet desktop '>
+                        <Box className='tablet desktop ' zIndex='2' position='relative'>
                             <img src={Salmon1} alt="" />
                         </Box>
                       
@@ -67,10 +67,10 @@ export default function MenuSection() {
                 <hr />
                 <Box className='revealRight' sx={{ display: 'flex',  flexDirection: {xs: 'column', md: 'row'}, textAlign: {xs: 'center', md: 'left'} }}>
                 <Box className='image-container'>
-                        <Box className='mobile'>
+                        <Box className='mobile'  zIndex='2 ' position='relative'>
                             <img src={Beef0} alt="" />
                         </Box>
-                        <Box className='tablet desktop  '>
+                        <Box className='tablet desktop'  zIndex='2 ' position='relative'>
                             <img src={Beef1} alt="" />
                         </Box>
                     
@@ -83,10 +83,10 @@ export default function MenuSection() {
                 <hr />
                 <Box className='revealRight' sx={{ display: 'flex', flexDirection: {xs: 'column', md: 'row'},textAlign: {xs: 'center', md: 'left'}  }}>
                 <Box className='image-container'>
-                        <Box className='mobile'>
+                        <Box className='mobile'  zIndex='2 ' position='relative'>
                             <img src={ Snack0} alt="" />
                         </Box>
-                        <Box className='tablet desktop  '>
+                        <Box className='tablet desktop'   zIndex='2 ' position='relative'>
                             <img src={ Snack1} alt="" />
                         </Box>
                     </Box>
