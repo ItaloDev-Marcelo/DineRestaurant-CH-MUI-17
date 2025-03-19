@@ -58,11 +58,13 @@ export default function AboutUs() {
               <Box className='mobile reveal'>
               <img src={FoodPlate1} alt="" />
               </Box>
-              <Box className='line-L1' maxWidth='100px'>
+
+
+              <Box className='line-L1' width='700px' display={{xs: 'none', md: 'block'}}>
                 <img src={Line} alt='' />
               </Box>
             
-              <Box className='desktop reveal' position='relative' top='5em' right='-10em'>
+              <Box className='desktop reveal' position='relative' top={{md: '-7em', lg: '5em'}} right='-10em'>
               <img src={FoodPlate3} alt="" />
               </Box>
 
