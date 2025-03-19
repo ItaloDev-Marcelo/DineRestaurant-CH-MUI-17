@@ -1,12 +1,12 @@
 import { Box,  Stack, Typography } from "@mui/material";
 
 import CheepImage1 from '../assets/images/homepage/enjoyable-place-mobile@2x.jpg';
-import CheepImage2 from '../assets/images/homepage/enjoyable-place-tablet@2x.jpg';
 import CheepImage3 from '../assets/images/homepage/enjoyable-place-desktop@2x.jpg';
 
 import FoodPlate1 from '../assets/images/homepage/locally-sourced-mobile@2x.jpg'
-import FoodPlate2 from '../assets/images/homepage/locally-sourced-tablet@2x.jpg'
 import FoodPlate3 from '../assets/images/homepage/locally-sourced-desktop@2x.jpg'
+
+import Line from '../assets/images/patterns/pattern-lines.svg';
 
 
 import ScrollReveal from "scrollreveal";
@@ -58,10 +58,16 @@ export default function AboutUs() {
               <Box className='mobile reveal'>
               <img src={FoodPlate1} alt="" />
               </Box>
+              <Box className='line-L1' maxWidth='100px'>
+                <img src={Line} alt='' />
+              </Box>
             
               <Box className='desktop reveal' position='relative' top='5em' right='-10em'>
               <img src={FoodPlate3} alt="" />
               </Box>
+
+             
+
           <Stack component='div' className="reveal"  margin={{xs: '1em 0', lg: '0'}} maxWidth='500px'>
               <Box className='line-image' position='relative'>
               <Box className='bubble'>○</Box>

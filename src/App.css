@@ -264,6 +264,20 @@ picture div img  {
 }
 
 
+.Travel-plates {
+
+  background: url(./assets/images/patterns/pattern-curve-top-left.svg) ,  url(./assets/images/patterns/pattern-curve-top-left.svg) ;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 90%, 90%;
+  background-position: top 25% left -27em, bottom 2em right -25em;
+  
+}
+
+.L1 .mobile {
+   position: relative;
+}
+
+
 
   }
   
