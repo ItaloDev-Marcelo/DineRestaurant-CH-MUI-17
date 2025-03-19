@@ -1,24 +1,19 @@
 
 import './App.css'
-import AboutUs from './Pages/AboutUs'
-import BookATableSection from './Pages/BookATableSection'
-import Rodape from './Pages/Footer'
-import Home from './Pages/Home'
-import MenuSection from './Pages/MenuSection'
-import MiddleSection from './Pages/MiddleSection'
+import MainPag from './Pages/nextPage/MainPa'
+import BookYourTable from './Pages/nextPage/bookYourTable'
+import { Navigate, Route, Routes } from "react-router-dom"
 
 function App() {
+  
 
   return (
     <>
-     <Home/>
-     <main>
-        <AboutUs/>
-        <MenuSection/>
-        <BookATableSection/>
-        <MiddleSection/>
-     </main>
-     <Rodape/>
+     <Routes>
+        <Route path="/" element={<Navigate to='DineHomePage'/>} />
+        <Route path="/DineHomePage" element={<MainPag />} />
+        <Route path='/Book' element={<BookYourTable/>} />
+     </Routes>
     </>
   )
 }

@@ -145,6 +145,15 @@ h4 {
   width: 100%;
 }
 
+.pt-1 {
+  background-image: url(./assets/images/booking/hero-bg-mobile@2x.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
 h5 {
   font-weight: 600 !important;
 }
@@ -194,6 +203,11 @@ body
 }
 
 
+.pt-1 {
+  background-image: url(./assets/images/booking/hero-bg-tablet@2x.jpg);
+}
+
+
 .Travel-plates img {
   max-width: 60%;
 }
@@ -232,7 +246,7 @@ picture div img  {
 
 .Middle-Page {
 
-    height: 30vh;
+    height: 40vh;
   background-image: url(./assets/images/homepage/ready-bg-tablet@2x.jpg);
 }
 
@@ -307,6 +321,12 @@ picture div img  {
   .desktop img {
     max-width: 100%;
     width: 70%;
+  }
+
+  .pt-1 {
+    background-image: url(./assets/images/booking/hero-bg-desktop@2x.jpg);
+    height: 100vh;
+    width: 100vw;
   }
 
   .list-info::before {
