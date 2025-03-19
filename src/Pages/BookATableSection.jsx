@@ -15,8 +15,11 @@ import { Stack, Typography, Box, Button } from '@mui/material';
 import { useState, useEffect } from 'react';
 import ScrollReveal from "scrollreveal";
 
+
+import {useNavigate } from "react-router-dom"
 export default function BookATableSection() {
 
+  const Navigate = useNavigate()
   const [slideItem, setSlideItem] = useState('Slider-one')
 
      useEffect(() => {
@@ -96,7 +99,7 @@ export default function BookATableSection() {
         <Typography component='h4'>Family Gathering</Typography>
           <Typography component='p'>We love catering for entire families. So please bring everyone along for a special meal with your 
           loved ones. We’ll provide a memorable experience for all.</Typography>
-          <Button sx={{ background: 'black', width: {xs: '200', lg: '325px'}, height: '50px', fontWeight: '600', position: 'relative', top: '2em', border: 'none', color: 'white', '&:hover': { background: 'white', color: 'black' }, alignSelf: {xs: 'center', lg: 'flex-start'}}}>Book a table</Button>
+          <Button onClick={() => Navigate('/Book')} sx={{ background: 'black', width: {xs: '200', lg: '325px'}, height: '50px', fontWeight: '600', position: 'relative', top: '2em', border: 'none', color: 'white', '&:hover': { background: 'white', color: 'black' }, alignSelf: {xs: 'center', lg: 'flex-start'}}}>Book a table</Button>
    
         </Stack>
        
@@ -113,7 +116,7 @@ export default function BookATableSection() {
         <Typography component='h4'>Special Events</Typography>
           <Typography component='p'>Whether it’s a romantic dinner or special date you’re celebrating with others we’ll look after you. 
           We’ll be sure to mark your special date with an unforgettable meal.</Typography>
-          <Button sx={{ background: 'black', width: {xs: '200', lg: '325px'}, height: '50px', fontWeight: '600', position: 'relative', top: '2em', border: 'none', color: 'white', '&:hover': { background: 'white', color: 'black' },  alignSelf: {xs: 'center', lg: 'flex-start'} }}>Book a table</Button> 
+          <Button onClick={() => Navigate('/Book')} sx={{ background: 'black', width: {xs: '200', lg: '325px'}, height: '50px', fontWeight: '600', position: 'relative', top: '2em', border: 'none', color: 'white', '&:hover': { background: 'white', color: 'black' },  alignSelf: {xs: 'center', lg: 'flex-start'} }}>Book a table</Button> 
        
         </Stack>
          </Stack>
@@ -129,7 +132,7 @@ export default function BookATableSection() {
         <Typography component='h4'>Social Events</Typography>
           <Typography component='p'>Are you looking to have a larger social event? No problem! We’re more than happy to cater for big
           parties. We’ll work with you to make your event a hit with everyone.</Typography>
-          <Button sx={{ background: 'black', width: {xs: '200', lg: '325px'}, height: '50px', fontWeight: '600', position: 'relative', top: '2em', border: 'none', color: 'white', '&:hover': { background: 'white', color: 'black' },  alignSelf: {xs: 'center', lg: 'flex-start'} }}>Book a table</Button>
+          <Button onClick={() => Navigate('/Book')} sx={{ background: 'black', width: {xs: '200', lg: '325px'}, height: '50px', fontWeight: '600', position: 'relative', top: '2em', border: 'none', color: 'white', '&:hover': { background: 'white', color: 'black' },  alignSelf: {xs: 'center', lg: 'flex-start'} }}>Book a table</Button>
        
         </Stack>
          </Stack>

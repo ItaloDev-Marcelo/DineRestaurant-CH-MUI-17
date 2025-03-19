@@ -4,8 +4,12 @@ import { useEffect } from 'react';
 import ScrollReveal from "scrollreveal";
 
 
+import {useNavigate } from "react-router-dom"
+
 export default  function MiddleSection() {
 
+  
+    const Navigate = useNavigate()
   
        useEffect(() => {
         ScrollReveal().reveal(".reveal", {
@@ -33,7 +37,7 @@ export default  function MiddleSection() {
        
 
        
-          <Button className='revealR'  sx={{background: 'trasparent', width: '200px', height: '50px', fontWeight: '600', position: 'relative', top: '2em', border: 'none', outline: '1px solid white',color: '#fff', '&:hover': {background: 'white', color: '#000'}}}>Book a table</Button>
+          <Button className='revealR' onClick={() => Navigate('/Book')}  sx={{background: 'trasparent', width: '200px', height: '50px', fontWeight: '600', position: 'relative', top: '2em', border: 'none', outline: '1px solid white',color: '#fff', '&:hover': {background: 'white', color: '#000'}}}>Book a table</Button>
        
 
     </Stack>
