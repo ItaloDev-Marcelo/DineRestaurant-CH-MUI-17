@@ -159,6 +159,7 @@ h5 {
 }
 
 
+
 @media (min-width: 414px) {
 
 body
@@ -178,6 +179,16 @@ body
   background-position: top 25% center;
   width: 100%;
  
+}
+
+
+.Travel-plates {
+
+  background: url(./assets/images/patterns/pattern-curve-top-left.svg) ,  url(./assets/images/patterns/pattern-curve-top-left.svg) ;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 90%, 90%;
+  background-position: top 25% left -20em, bottom 2em right -15em;
+  
 }
 
 
