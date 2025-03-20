@@ -23,7 +23,7 @@ const [howManyPeople, setHowManyPeople] = useState(1)
         
   return (
     <>
-    <Stack className='pt-1' component='div'>
+    <Stack className='pt-1' component='Stack'>
         <Stack className='top-bg reveal'>
         <AppBar color='trasparent' position='static' sx={{display: {xs: 'none', lg: 'block'}, boxShadow: 'none', paddingTop: '5em', paddingLeft: '10em'}} >
                   <img src={Logo} alt=''/>
@@ -38,36 +38,44 @@ const [howManyPeople, setHowManyPeople] = useState(1)
                    <Button  onClick={() => Navigate('/DineHomePage')}   sx={{background: 'trasparent', width: '200px', height: '50px', fontWeight: '600', position: 'relative', top: '2em', border: 'none', outline: '1px solid white',color: '#fff', '&:hover': {background: 'white', color: '#000'}}}>Reserve Place</Button>
           </Box>
     </Stack>
-    <Stack>
+    <Stack maxWidth={{xs: '330px', md: '545px'}} flexDirection='row' padding='1em' height={{xs:'400px'}} boxShadow='8px 8px 5px -6px rgba(0,0,0,0.41)'>
         <form method='get'>
+            <Stack className='area-1' >
             <label htmlFor='name'>
             <input type='text' name='name' id='name' placeholder='Name' /> 
             </label>
+            </Stack>
+            <Stack  className='area-1'>
             <label htmlFor='email'>
-            <input type='email' name='email' id='email' placeholder='email' /> 
+            <input type='email' name='email' id='email' placeholder='Email' /> 
             </label>
-            <div>
+            </Stack>
+            <Stack component='div' display='flex' flexDirection={{xs: 'column', md: 'row'}} >
                 <label>Pick a Date</label>
-                <input type='text' name='mes' id='mes'/>
+               <Stack flexDirection='row' className='area-2' >
+               <input type='text' name='mes' id='mes'/>
                 <input type='text' name='day' id='day'/>
                 <input type='text' name='year' id='year'/>
-            </div>
+               </Stack>
+            </Stack>
 
-            <div>
+            <Stack  component='div' display='flex' flexDirection={{xs: 'column', md: 'row'}} >
                 <label>Pick a time</label>
+               <Stack flexDirection='row' className='area-3' >
                 <input type='number' name='hora'  maxLength='2'  id='hora'/>
                 <input type='number' name='minuto'  maxLength='2'  id='minuto'/>
                 <select>
                    <option value='AM' selected>AM</option>
                    <option value='PM' selected>PM</option>
                 </select>
-            </div>
+               </Stack>
+            </Stack>
 
-            <div>
+            <Stack flexDirection='row' className='area-4'>
                 <button type='button' onClick={() => setHowManyPeople(prev => prev - 1)}>-</button>
                 <input type='text'  disabled value={`${howManyPeople} people`} />
                 <button type='button'  onClick={() => setHowManyPeople(prev => prev + 1)}>+</button>
-            </div>
+            </Stack>
 
             <Button>Make a Reservation</Button>
         </form>
