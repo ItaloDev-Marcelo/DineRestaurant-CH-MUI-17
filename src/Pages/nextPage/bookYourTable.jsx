@@ -1,4 +1,4 @@
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import Footer  from '../Footer'
 import { AppBar, Stack, Box, Typography, Button} from '@mui/material'
 import ScrollReveal from "scrollreveal";
@@ -7,6 +7,8 @@ import Logo from '../../assets/images/logo.svg'
 import {useNavigate } from "react-router-dom"
 export default function bookYourTable()  {
 const Navigate = useNavigate()
+
+const [howManyPeople, setHowManyPeople] = useState(1)
 
   useEffect(() => {
          ScrollReveal().reveal(".reveal", {
@@ -35,9 +37,40 @@ const Navigate = useNavigate()
                    call on the phone number below. We’ll be happy to accommodate you.</Typography>
                    <Button  onClick={() => Navigate('/DineHomePage')}   sx={{background: 'trasparent', width: '200px', height: '50px', fontWeight: '600', position: 'relative', top: '2em', border: 'none', outline: '1px solid white',color: '#fff', '&:hover': {background: 'white', color: '#000'}}}>Reserve Place</Button>
           </Box>
-        <Stack className='nx'>
+    </Stack>
+    <Stack>
+        <form method='get'>
+            <label htmlFor='name'>
+            <input type='text' name='name' id='name' placeholder='Name' /> 
+            </label>
+            <label htmlFor='email'>
+            <input type='email' name='email' id='email' placeholder='email' /> 
+            </label>
+            <div>
+                <label>Pick a Date</label>
+                <input type='text' name='mes' id='mes'/>
+                <input type='text' name='day' id='day'/>
+                <input type='text' name='year' id='year'/>
+            </div>
 
-        </Stack>
+            <div>
+                <label>Pick a time</label>
+                <input type='number' name='hora'  maxLength='2'  id='hora'/>
+                <input type='number' name='minuto'  maxLength='2'  id='minuto'/>
+                <select>
+                   <option value='AM' selected>AM</option>
+                   <option value='PM' selected>PM</option>
+                </select>
+            </div>
+
+            <div>
+                <button type='button' onClick={() => setHowManyPeople(prev => prev - 1)}>-</button>
+                <input type='text'  disabled value={`${howManyPeople} people`} />
+                <button type='button'  onClick={() => setHowManyPeople(prev => prev + 1)}>+</button>
+            </div>
+
+            <Button>Make a Reservation</Button>
+        </form>
     </Stack>
     <Footer/>
     </>
