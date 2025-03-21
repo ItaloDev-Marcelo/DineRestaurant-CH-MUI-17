@@ -6,6 +6,9 @@ import Grid from '@mui/material/Grid2';
 import ScrollReveal from "scrollreveal";
 import Logo from '../../assets/images/logo.svg'
 
+import plus from '../../assets/images/icons/icon-plus.svg'
+import minus from '../../assets/images/icons/icon-minus.svg'
+
 import {useNavigate } from "react-router-dom"
 export default function bookYourTable()  {
 const Navigate = useNavigate()
@@ -43,7 +46,7 @@ const [howManyPeople, setHowManyPeople] = useState(1)
     <Stack  maxWidth={{xs: '90%', md: '450px'}} 
      backgroundColor='#fff' position='relative' top={{xs:'-15em' , md: '-5em', lg: '-25em'}}
      left={{xs: '1.5em', md:'17.5em', lg: '50em'}} padding='2em' height={{xs:'auto'}}
-      boxShadow='8px 8px 5px -6px rgba(0,0,0,0.41)'>
+      boxShadow='8px 8px 5px -6px rgba(0,0,0,0.41)' className='reveal'>
       
       <Grid container>
         
@@ -106,9 +109,9 @@ const [howManyPeople, setHowManyPeople] = useState(1)
        
 
             <Grid size={12} display='flex' className='area-4'>
-                <button type='button' onClick={() => setHowManyPeople(prev => prev - 1)}>-</button>
-                <input type='text'  disabled value={`${howManyPeople} people`} />
-                <button type='button'  onClick={() => setHowManyPeople(prev => prev + 1)}>+</button>
+                <button type='button' onClick={() => setHowManyPeople(prev => prev - 1)}><img src={minus} />    </button>
+                <input type='text' style={{backgroundColor: 'transparent'}}  disabled value={`${howManyPeople} people`} />
+                <button type='button'  onClick={() => setHowManyPeople(prev => prev + 1)}><img src={plus} /> </button>
             </Grid>
 
             
