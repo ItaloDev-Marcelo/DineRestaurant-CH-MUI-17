@@ -40,9 +40,9 @@ const [howManyPeople, setHowManyPeople] = useState(1)
                    <Button  onClick={() => Navigate('/DineHomePage')}   sx={{background: 'trasparent', width: '200px', height: '50px', fontWeight: '600', position: 'relative', top: '2em', border: 'none', outline: '1px solid white',color: '#fff', '&:hover': {background: 'white', color: '#000'}}}>Reserve Place</Button>
           </Box>
     </Stack>
-    <Stack  maxWidth={{xs: '330px', md: '450px'}} 
+    <Stack  maxWidth={{xs: '90%', md: '450px'}} 
      backgroundColor='#fff' position='relative' top={{xs:'-15em' , md: '-5em', lg: '-25em'}}
-     left={{xs: '1.5em', md:'17.5em', lg: '50em'}} padding='2em' height={{xs:'500px'}}
+     left={{xs: '1.5em', md:'17.5em', lg: '50em'}} padding='2em' height={{xs:'auto'}}
       boxShadow='8px 8px 5px -6px rgba(0,0,0,0.41)'>
       
       <Grid container>
