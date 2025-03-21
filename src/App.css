@@ -167,7 +167,52 @@ h5 {
   display: inline-block;
 }
 
+input, select{
+  max-width: 100%;
+  width: 100%;
+  padding:  1em 0;
+}
 
+select {
+  position: relative;
+  top: .35em;
+}
+
+
+
+.area-4 input {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: none;
+}
+
+.area-4 button {
+  border: none;
+  background-color: transparent;
+}
+
+.area-1:not(:nth-of-type(1)), .area-2, .area-3, .area-4 {
+  margin: .5em 0;
+}
+
+.area-1 input, .area-2 input, .area-3 input {
+  margin: .5em 0;
+}
+
+
+.area-4 {
+  border-bottom: 1px solid #242B37;
+  padding-bottom: 1em;
+}
+
+input, select {
+  border: none;
+  
+  border-bottom: 1px solid #242B37;
+}
+
+/* 
 form {
   max-width: 330px;
 }
@@ -214,14 +259,50 @@ input , select{
   margin: 0 .5em 0 0;
 }
 
+
+
 .area-3 input:nth-of-type(3) {
   margin: 0 .5em;
 }
 
+.area-4 input, .area-4 button {
+   border: none;
+   background-color: transparent;
+}
+
+.area-4 input {
+  text-align: center;
+font-weight: bold;
+color: #000;
+}
 
 
+.area-2, .area-3, .area-4 {
+  margin: 1em 0;
+}
+
+ */
 
 
+ select{
+  appearance: none; /* Remove a aparência padrão */
+  -webkit-appearance: none; /* Para navegadores WebKit */
+  -moz-appearance: none; /* Para Firefox */
+  background-image: url('./assets/images/icons/icon-arrow.svg'); /* Adicione a imagem da seta */
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* Ajusta a posição da seta */
+  background-size: 12px; /* Ajusta o tamanho da seta */
+  padding-right: 30px; /* Garante espaço para a seta */
+  padding-left: 1em;
+  font-weight: bold;
+  
+}
+
+
+.area-4 input {
+  color: #000;
+  font-weight: bold;
+}
 
 
 
@@ -239,10 +320,85 @@ body
 @media (min-width: 800px)  {
 
 
-  form {
+  /* form {
     max-width: 100%;
     padding: 1em;
   }
+
+  .area-2 input 
+  {
+    position: relative;
+    left: .5em;
+    width:80px;
+  }
+  
+  .sub-area > label {
+    display: flex;
+    width: 130px;
+    align-self: center;
+    text-align: center;
+
+    background-color: red;
+  }
+
+  .sub-area-2 > label {
+    display: flex;
+    width: 130px;
+    align-self: center;
+    text-align: center;
+  }
+
+  .area-1 input{
+    max-width: 97.8%;
+  }
+
+
+  .area-2 input:nth-of-type(1),  .area-3 input:nth-of-type(1) {
+    margin: 0 1em;
+  }
+
+  .area-2 input:not(:nth-of-type(1)) {
+    margin: 0 1em;
+  }
+
+
+
+
+  .area-3 input, .area-3 select {
+    width: 80px !important;
+    background-color: #B54949;
+  }
+
+
+  .area-3 {
+    position: relative;
+    left: .5em;
+  }
+
+
+
+  .area-3 input:not(:nth-of-type(1)), .area-3 select  {
+    margin: 0 1em;
+  } */
+
+  /* .area-3 input:not(:nth-of-type(1)), .area-3 select {
+    margin: .5em;
+    position: relative;
+    left: .2em;
+  } */
+
+  
+
+
+  label {
+    display: flex;
+    margin-top: 1.5em;
+  }
+  
+  
+  
+  
+  
   
   
 body
