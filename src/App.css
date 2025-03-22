@@ -552,7 +552,7 @@ picture div img  {
 
   .pt-1 {
     background-image: url(./assets/images/booking/hero-bg-desktop@2x.jpg);
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
   }
 
@@ -688,6 +688,19 @@ picture div img  {
    right: -40em;
    z-index: 100;
  }
+
+
+ .line-L2 {
+  position: absolute;
+  top: 7em;
+  left: 45em;
+  z-index: 2;
+}
+
+
+
+
+
 
 }
 
