@@ -305,6 +305,11 @@ color: #000;
 }
 
 
+input[type='number']::placeholder {
+   font-size: 1.3em;
+   letter-spacing: 1px;
+}
+
 
 
 @media (min-width: 414px) {

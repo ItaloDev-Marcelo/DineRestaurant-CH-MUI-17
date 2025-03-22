@@ -9,10 +9,16 @@ import plus from '../../assets/images/icons/icon-plus.svg'
 import minus from '../../assets/images/icons/icon-minus.svg'
 
 import {useNavigate } from "react-router-dom"
+import { useForm } from "react-hook-form";
 export default function bookYourTable()  {
+  
 const Navigate = useNavigate()
-
+const {register, handleSubmit, formState: { errors }} = useForm();
 const [howManyPeople, setHowManyPeople] = useState(1)
+
+const FormDataSubmit = (data) => {
+   console.log(data)
+}
 
   useEffect(() => {
          ScrollReveal().reveal(".reveal", {
@@ -49,76 +55,85 @@ const [howManyPeople, setHowManyPeople] = useState(1)
       boxShadow='8px 8px 5px -6px rgba(0,0,0,0.41)' className='reveal form' zIndex='4'>
       
        
+      <form onSubmit={handleSubmit(FormDataSubmit)}>
       <Grid container>
         
-      <Grid size={12}  className='area-1' >
-            <label htmlFor='name'>
-            <input type='text' name='name' id='name' placeholder='Name' /> 
-            </label>
-            </Grid>
-
-            <Grid  size={12}  className='area-1'>
-            <label htmlFor='email'>
-            <input type='email' name='email' id='email' placeholder='Email' /> 
-            </label>
-            </Grid>
-
-
-            <Grid size={12}   display='flex' component='div' className='sub-area'  >
-            
-               <Grid container  className='area-2' >
-               <Grid size={{xs: 12, md: 2}}>
-                <label>Pick a Date</label>
-            </Grid>
-               <Grid size={{xs: 4, md: 4}} padding={{xs: '0  2em 0  0', md:'0 2em' }}>
-               <input type='number' name='mes' id='mes' placeholder='MM'/>
-               </Grid>
-               <Grid size={{xs: 4, md: 4}} padding={{xs: '0  2em 0  0', md:'0 3em 0 1em' }}>
-               <input type='number' name='day' id='day' placeholder='DD'/>
-               </Grid>
-               <Grid size={{xs: 4, md: 2}} padding={{xs: '0 0 .5em 0', md:'0' }}>
-               <input type='number' name='year' id='year' placeholder='YYYY'/>
-
-               </Grid>
-
+        <Grid size={12}  className='area-1' >
+              <label htmlFor='name'>
+              <input type='text' name='name'  {...register("name", { required: "Name is required" })}  id='name' placeholder='Name' /> 
+               {errors.name && <p>{errors.name.message}  </p>}
+              </label>
+              </Grid>
+  
+              <Grid  size={12}  className='area-1'>
+              <label htmlFor='email'>
+              <input type='email' name='email' {...register("email", { required: "Email is required" })} id='email' placeholder='Email' /> 
+              {errors.email && <p>{errors.email.message}  </p>}
+              </label>
+              </Grid>
+  
+  
+              <Grid size={12}   display='flex' component='div' className='sub-area'  >
+              
+                 <Grid container  className='area-2' >
+                 <Grid size={{xs: 12, md: 2}}>
+                  <label>Pick a Date</label>
+              </Grid>
+                 <Grid size={{xs: 4, md: 4}}  padding={{xs: '0  2em 0  0', md:'0 2em' }}>
+                 <input type='number' name='mes'  {...register("mes", { required: "Month is required" })}  id='mes' placeholder='MM'/>
+                 {errors.mes && <p>{errors.mes.message}  </p>}
                  </Grid>
-            </Grid>
-
-            <Grid size={12}   display='flex' component='div' className='sub-area'  >
-            
-               <Grid container  className='area-2' >
-               <Grid size={{xs: 12, md: 2}}>
-                <label>Pick a time</label>
-            </Grid>
-               <Grid size={{xs: 4, md: 4}} padding={{xs: '0  2em 0  0', md:'0 2em' }}>
-               <input type='number' name='hora'  maxLength='2'  id='hora' placeholder='09'/>
-               </Grid>
-               <Grid size={{xs: 4, md: 4}} padding={{xs: '0  2em 0  0', md:'0 3em 0 1em' }}>
-               <input type='number' name='minuto'  maxLength='2' placeholder='00'  id='minuto'/>
-               </Grid>
-               <Grid size={{xs: 4, md: 2}} padding={{xs: '0 0 .5em 0', md:'0' }}>
-               <select>
-                   <option value='AM' selected>AM</option>
-                   <option value='PM' >PM</option>
-                </select>
-
-               </Grid>
-
+                 <Grid size={{xs: 4, md: 4}} padding={{xs: '0  2em 0  0', md:'0 3em 0 1em' }}>
+                 <input type='number' name='day'  {...register("day", { required: "Day is required" })} id='day' placeholder='DD'/>
+                 {errors.day && <p>{errors.day.message}  </p>}
                  </Grid>
-            </Grid>
-
-       
-
-            <Grid size={12} display='flex' className='area-4'>
-                <button type='button' onClick={() => setHowManyPeople(prev => prev - 1)}><img src={minus} />    </button>
-                <input type='text' style={{backgroundColor: 'transparent'}}  disabled value={`${howManyPeople} people`} />
-                <button type='button'  onClick={() => setHowManyPeople(prev => prev + 1)}><img src={plus} /> </button>
-            </Grid>
-
-            
-            <Button onClick={() => Navigate('/Book')} sx={{ background: 'black', width: '100% ', height: '50px', fontWeight: '600', position: 'relative', top: '1em', border: 'none', color: 'white', '&:hover': { background: 'white', color: 'black', border: '1px solid #000' }, alignSelf: {xs: 'center', lg: 'flex-start'}}}>Make a Reservation</Button>
-               
-      </Grid>
+                 <Grid size={{xs: 4, md: 2}} padding={{xs: '0 0 .5em 0', md:'0' }}>
+                 <input type='number' name='year'  {...register("year", { required: "Year is required" })} id='year' placeholder='YYYY'/>
+                 {errors.year && <p>{errors.year.message}  </p>}
+                 </Grid>
+  
+                   </Grid>
+              </Grid>
+  
+              <Grid size={12}   display='flex' component='div' className='sub-area'  >
+              
+                 <Grid container  className='area-2' >
+                 <Grid size={{xs: 12, md: 2}}>
+                  <label>Pick a time</label>
+              </Grid>
+                 <Grid size={{xs: 4, md: 4}} padding={{xs: '0  2em 0  0', md:'0 2em' }}>
+                 <input type='number' name='hora'  {...register("hora", { required: "hour is required" })}  maxLength='2'  id='hora' placeholder='09'/>
+                 {errors.hora && <p>{errors.hora.message}  </p>}
+                 </Grid>
+                 <Grid size={{xs: 4, md: 4}} padding={{xs: '0  2em 0  0', md:'0 3em 0 1em' }}>
+                 <input type='number' name='minuto'  {...register("minuto", { required: "Minute is required" })}  maxLength='2' placeholder='00'  id='minuto'/>
+                 {errors.minuto && <p>{errors.minuto.message}  </p>}
+                 </Grid>
+                 <Grid size={{xs: 4, md: 2}} padding={{xs: '0 0 .5em 0', md:'0' }}>
+                 <select  {...register("option", { required: "Required" })}>
+                     <option value='AM' selected>AM</option>
+                     <option value='PM' >PM</option>
+                     {errors.option && <p>{errors.option.message}  </p>}
+                  </select>
+  
+                 </Grid>
+  
+                   </Grid>
+              </Grid>
+  
+         
+  
+              <Grid size={12} display='flex' className='area-4'>
+                  <button type='button' onClick={() => setHowManyPeople(prev => prev - 1)}><img src={minus} />    </button>
+                  <input type='text' style={{backgroundColor: 'transparent'}}  disabled value={`${howManyPeople} people`} />
+                  <button type='submit'  onClick={() => setHowManyPeople(prev => prev + 1)}><img src={plus} /> </button>
+              </Grid>
+  
+              
+              <Button onClick={() => Navigate('/Book')} sx={{ background: 'black', width: '100% ', height: '50px', fontWeight: '600', position: 'relative', top: '1em', border: 'none', color: 'white', '&:hover': { background: 'white', color: 'black', border: '1px solid #000' }, alignSelf: {xs: 'center', lg: 'flex-start'}}}>Make a Reservation</Button>
+                 
+        </Grid>
+      </form>
        
     </Stack>
     <Box className='line-L2' width='700px'   display={{xs: 'none', md: 'block'}}>
