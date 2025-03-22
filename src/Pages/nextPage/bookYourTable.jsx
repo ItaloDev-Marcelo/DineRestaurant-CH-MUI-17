@@ -108,11 +108,11 @@ const FormDataSubmit = () => {
                  {errors.hora ? <p className='error'> this fiel is required     </p> : null}
                  </Grid>
                  <Grid size={{xs: 4, md: 4}} padding={{xs: '0  2em 0  0', md:'0 3em 0 1em' }}>
-                 <input type='number' name='minuto'  {...register("minuto", { required: true  })} style={{borderColor: errors.option   ? ' #B54949' : '#242B37'}}  maxLength='2' placeholder='00'  id='minuto'/>
+                 <input type='number' name='minuto'  {...register("minuto", { required: true  })} style={{borderColor: errors.minuto   ? ' #B54949' : '#242B37'}}  maxLength='2' placeholder='00'  id='minuto'/>
                  {errors.minuto ? <p className='error'> this fiel is required     </p> : null}
                  </Grid>
                  <Grid size={{xs: 4, md: 2}} padding={{xs: '0 0 .5em 0', md:'0' }}>
-                 <select  {...register("option", { required: true  })} style={{borderColor: errors.minuto   ? ' #B54949' : '#242B37'}} >
+                 <select  {...register("option", { required: true  })}  >
                      <option value='AM' selected>AM</option>
                      <option value='PM' >PM</option>
                      {errors.option ? <p className='error'> this fiel is required   </p> : null}
