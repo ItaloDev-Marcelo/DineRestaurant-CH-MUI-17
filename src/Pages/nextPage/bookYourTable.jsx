@@ -13,7 +13,7 @@ import { useForm } from "react-hook-form";
 export default function bookYourTable()  {
   
 const Navigate = useNavigate()
-const {register, handleSubmit, formState: { errors }} = useForm();
+const {handleSubmit,register ,formState:{errors}, reset} = useForm();
 const [howManyPeople, setHowManyPeople] = useState(1)
 
 const FormDataSubmit = (data) => {
@@ -55,20 +55,20 @@ const FormDataSubmit = (data) => {
       boxShadow='8px 8px 5px -6px rgba(0,0,0,0.41)' className='reveal form' zIndex='4'>
       
        
-      <form onSubmit={handleSubmit(FormDataSubmit)}>
+      <form onSubmit={handleSubmit}>
       <Grid container>
         
         <Grid size={12}  className='area-1' >
               <label htmlFor='name'>
-              <input type='text' name='name'  {...register("name", { required: "Name is required" })}  id='name' placeholder='Name' /> 
-               {errors.name && <p>{errors.name.message}  </p>}
+              <input type='text' name='name'  {...register("name", { required: true  })}  id='name' placeholder='Name' /> 
+               {errors.name ? <p>{errors.name}  </p> : null}
               </label>
               </Grid>
   
               <Grid  size={12}  className='area-1'>
               <label htmlFor='email'>
-              <input type='email' name='email' {...register("email", { required: "Email is required" })} id='email' placeholder='Email' /> 
-              {errors.email && <p>{errors.email.message}  </p>}
+              <input type='email' name='email' {...register("email", { required:true  })} id='email' placeholder='Email' /> 
+              {errors.email ? <p>{errors.email}  </p> : null}
               </label>
               </Grid>
   
@@ -80,16 +80,16 @@ const FormDataSubmit = (data) => {
                   <label>Pick a Date</label>
               </Grid>
                  <Grid size={{xs: 4, md: 4}}  padding={{xs: '0  2em 0  0', md:'0 2em' }}>
-                 <input type='number' name='mes'  {...register("mes", { required: "Month is required" })}  id='mes' placeholder='MM'/>
-                 {errors.mes && <p>{errors.mes.message}  </p>}
+                 <input type='number' name='mes'  {...register("mes", { required: true  })}  id='mes' placeholder='MM'/>
+                 {errors.mes ? <p>{errors.mes}  </p> : null}
                  </Grid>
                  <Grid size={{xs: 4, md: 4}} padding={{xs: '0  2em 0  0', md:'0 3em 0 1em' }}>
-                 <input type='number' name='day'  {...register("day", { required: "Day is required" })} id='day' placeholder='DD'/>
-                 {errors.day && <p>{errors.day.message}  </p>}
+                 <input type='number' name='day'  {...register("day", { required: true  })} id='day' placeholder='DD'/>
+                 {errors.day ? <p>{errors.day}  </p> : null}
                  </Grid>
                  <Grid size={{xs: 4, md: 2}} padding={{xs: '0 0 .5em 0', md:'0' }}>
-                 <input type='number' name='year'  {...register("year", { required: "Year is required" })} id='year' placeholder='YYYY'/>
-                 {errors.year && <p>{errors.year.message}  </p>}
+                 <input type='number' name='year'  {...register("year", { required: true  })} id='year' placeholder='YYYY'/>
+                 {errors.year ? <p>{errors.year}  </p> : null}
                  </Grid>
   
                    </Grid>
@@ -102,18 +102,18 @@ const FormDataSubmit = (data) => {
                   <label>Pick a time</label>
               </Grid>
                  <Grid size={{xs: 4, md: 4}} padding={{xs: '0  2em 0  0', md:'0 2em' }}>
-                 <input type='number' name='hora'  {...register("hora", { required: "hour is required" })}  maxLength='2'  id='hora' placeholder='09'/>
-                 {errors.hora && <p>{errors.hora.message}  </p>}
+                 <input type='number' name='hora'  {...register("hora", { required: true })}  maxLength='2'  id='hora' placeholder='09'/>
+                 {errors.hora ? <p>{errors.hora}  </p> : null}
                  </Grid>
                  <Grid size={{xs: 4, md: 4}} padding={{xs: '0  2em 0  0', md:'0 3em 0 1em' }}>
-                 <input type='number' name='minuto'  {...register("minuto", { required: "Minute is required" })}  maxLength='2' placeholder='00'  id='minuto'/>
-                 {errors.minuto && <p>{errors.minuto.message}  </p>}
+                 <input type='number' name='minuto'  {...register("minuto", { required: true  })}  maxLength='2' placeholder='00'  id='minuto'/>
+                 {errors.minuto ? <p>{errors.minuto}  </p> : null}
                  </Grid>
                  <Grid size={{xs: 4, md: 2}} padding={{xs: '0 0 .5em 0', md:'0' }}>
-                 <select  {...register("option", { required: "Required" })}>
+                 <select  {...register("option", { required: true  })}>
                      <option value='AM' selected>AM</option>
                      <option value='PM' >PM</option>
-                     {errors.option && <p>{errors.option.message}  </p>}
+                     {errors.option ? <p>{errors.option}  </p> : null}
                   </select>
   
                  </Grid>
@@ -126,11 +126,11 @@ const FormDataSubmit = (data) => {
               <Grid size={12} display='flex' className='area-4'>
                   <button type='button' onClick={() => setHowManyPeople(prev => prev - 1)}><img src={minus} />    </button>
                   <input type='text' style={{backgroundColor: 'transparent'}}  disabled value={`${howManyPeople} people`} />
-                  <button type='submit'  onClick={() => setHowManyPeople(prev => prev + 1)}><img src={plus} /> </button>
+                  <button type='button'  onClick={() => setHowManyPeople(prev => prev + 1)}><img src={plus} /> </button>
               </Grid>
   
               
-              <Button onClick={() => Navigate('/Book')} sx={{ background: 'black', width: '100% ', height: '50px', fontWeight: '600', position: 'relative', top: '1em', border: 'none', color: 'white', '&:hover': { background: 'white', color: 'black', border: '1px solid #000' }, alignSelf: {xs: 'center', lg: 'flex-start'}}}>Make a Reservation</Button>
+              <button type="submit">Make a Reservation</button>
                  
         </Grid>
       </form>
@@ -138,7 +138,7 @@ const FormDataSubmit = (data) => {
     </Stack>
     <Box className='line-L2' width='700px'   display={{xs: 'none', md: 'block'}}>
                       <img src={Line} alt='' />
-                    </Box>
+    </Box>
     </Stack>
     <Footer/>
     </>
