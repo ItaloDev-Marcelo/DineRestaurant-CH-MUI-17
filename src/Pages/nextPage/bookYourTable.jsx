@@ -9,15 +9,16 @@ import plus from '../../assets/images/icons/icon-plus.svg'
 import minus from '../../assets/images/icons/icon-minus.svg'
 
 import {useNavigate } from "react-router-dom"
-import { useForm } from "react-hook-form";
+import  {useForm }from "react-hook-form";
 export default function bookYourTable()  {
   
 const Navigate = useNavigate()
-const {handleSubmit,register ,formState:{errors}, reset} = useForm();
+const {handleSubmit,register ,formState:{errors}, reset, watch} = useForm();
 const [howManyPeople, setHowManyPeople] = useState(1)
 
-const FormDataSubmit = (data) => {
-   console.log(data)
+const FormDataSubmit = () => {
+  //  console.log(data)
+   reset()
 }
 
   useEffect(() => {
@@ -55,21 +56,22 @@ const FormDataSubmit = (data) => {
       boxShadow='8px 8px 5px -6px rgba(0,0,0,0.41)' className='reveal form' zIndex='4'>
       
        
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit(FormDataSubmit)}>
       <Grid container>
         
         <Grid size={12}  className='area-1' >
               <label htmlFor='name'>
-              <input type='text' name='name'  {...register("name", { required: true  })}  id='name' placeholder='Name' /> 
-               {errors.name ? <p>{errors.name}  </p> : null}
+              <input type='text' name='name' style={{borderColor: errors.name   ? ' #B54949' : '#242B37'}} {...register("name", { required: true  })}  id='name' placeholder='Name' /> 
               </label>
+              {errors.name ? <p className='error'>this fiel is required  </p> : null}
               </Grid>
   
               <Grid  size={12}  className='area-1'>
               <label htmlFor='email'>
-              <input type='email' name='email' {...register("email", { required:true  })} id='email' placeholder='Email' /> 
-              {errors.email ? <p>{errors.email}  </p> : null}
+              <input type='email' name='email'  style={{borderColor: errors.email   ? ' #B54949' : '#242B37'}} {...register("email", { required:true  })} id='email' placeholder='Email' /> 
+              
               </label>
+              {errors.email ? <p className='error'> this fiel is required    </p> : null}
               </Grid>
   
   
@@ -80,16 +82,16 @@ const FormDataSubmit = (data) => {
                   <label>Pick a Date</label>
               </Grid>
                  <Grid size={{xs: 4, md: 4}}  padding={{xs: '0  2em 0  0', md:'0 2em' }}>
-                 <input type='number' name='mes'  {...register("mes", { required: true  })}  id='mes' placeholder='MM'/>
-                 {errors.mes ? <p>{errors.mes}  </p> : null}
+                 <input type='number' name='mes'  style={{borderColor: errors.mes   ? ' #B54949' : '#242B37'}}  {...register("mes", { required: true  })}  id='mes' placeholder='MM'/>
+                 {errors.mes ? <p className='error'> this fiel is required     </p> : null}
                  </Grid>
                  <Grid size={{xs: 4, md: 4}} padding={{xs: '0  2em 0  0', md:'0 3em 0 1em' }}>
-                 <input type='number' name='day'  {...register("day", { required: true  })} id='day' placeholder='DD'/>
-                 {errors.day ? <p>{errors.day}  </p> : null}
+                 <input type='number' name='day'  style={{borderColor: errors.day   ? ' #B54949' : '#242B37'}}  {...register("day", { required: true  })} id='day' placeholder='DD'/>
+                 {errors.day ? <p className='error'> this fiel is required    </p> : null}
                  </Grid>
                  <Grid size={{xs: 4, md: 2}} padding={{xs: '0 0 .5em 0', md:'0' }}>
-                 <input type='number' name='year'  {...register("year", { required: true  })} id='year' placeholder='YYYY'/>
-                 {errors.year ? <p>{errors.year}  </p> : null}
+                 <input type='number' name='year'  style={{borderColor: errors.year   ? ' #B54949' : '#242B37'}}  {...register("year", { required: true  })} id='year' placeholder='YYYY'/>
+                 {errors.year ? <p className='error'> this fiel is required    </p> : null}
                  </Grid>
   
                    </Grid>
@@ -102,18 +104,18 @@ const FormDataSubmit = (data) => {
                   <label>Pick a time</label>
               </Grid>
                  <Grid size={{xs: 4, md: 4}} padding={{xs: '0  2em 0  0', md:'0 2em' }}>
-                 <input type='number' name='hora'  {...register("hora", { required: true })}  maxLength='2'  id='hora' placeholder='09'/>
-                 {errors.hora ? <p>{errors.hora}  </p> : null}
+                 <input type='number' name='hora'  {...register("hora", { required: true })} style={{borderColor: errors.hora   ? ' #B54949' : '#242B37'}}   maxLength='2'  id='hora' placeholder='09'/>
+                 {errors.hora ? <p className='error'> this fiel is required     </p> : null}
                  </Grid>
                  <Grid size={{xs: 4, md: 4}} padding={{xs: '0  2em 0  0', md:'0 3em 0 1em' }}>
-                 <input type='number' name='minuto'  {...register("minuto", { required: true  })}  maxLength='2' placeholder='00'  id='minuto'/>
-                 {errors.minuto ? <p>{errors.minuto}  </p> : null}
+                 <input type='number' name='minuto'  {...register("minuto", { required: true  })} style={{borderColor: errors.option   ? ' #B54949' : '#242B37'}}  maxLength='2' placeholder='00'  id='minuto'/>
+                 {errors.minuto ? <p className='error'> this fiel is required     </p> : null}
                  </Grid>
                  <Grid size={{xs: 4, md: 2}} padding={{xs: '0 0 .5em 0', md:'0' }}>
-                 <select  {...register("option", { required: true  })}>
+                 <select  {...register("option", { required: true  })} style={{borderColor: errors.minuto   ? ' #B54949' : '#242B37'}} >
                      <option value='AM' selected>AM</option>
                      <option value='PM' >PM</option>
-                     {errors.option ? <p>{errors.option}  </p> : null}
+                     {errors.option ? <p className='error'> this fiel is required   </p> : null}
                   </select>
   
                  </Grid>
@@ -123,14 +125,14 @@ const FormDataSubmit = (data) => {
   
          
   
-              <Grid size={12} display='flex' className='area-4'>
+              <Grid size={12} display='flex' className='area-4'  style={{borderColor: errors.minuto   ? ' #B54949' : '#242B37'}}>
                   <button type='button' onClick={() => setHowManyPeople(prev => prev - 1)}><img src={minus} />    </button>
-                  <input type='text' style={{backgroundColor: 'transparent'}}  disabled value={`${howManyPeople} people`} />
+                  <input type='text' name='display' id='display' {...register("display", { required: true  })}  style={{backgroundColor: 'transparent'}}  disabled value={`${howManyPeople} people`} />
                   <button type='button'  onClick={() => setHowManyPeople(prev => prev + 1)}><img src={plus} /> </button>
               </Grid>
   
               
-              <button type="submit">Make a Reservation</button>
+              <Button type='submit'   sx={{ background: 'black', width: '100% ', height: '50px', fontWeight: '600', position: 'relative', top: '1em', border: 'none', color: 'white', '&:hover': { background: 'white', color: 'black', border: '1px solid #000' }, alignSelf: {xs: 'center', lg: 'flex-start'}}}>Make a Reservation</Button>
                  
         </Grid>
       </form>
@@ -138,7 +140,7 @@ const FormDataSubmit = (data) => {
     </Stack>
     <Box className='line-L2' width='700px'   display={{xs: 'none', md: 'block'}}>
                       <img src={Line} alt='' />
-    </Box>
+                    </Box>
     </Stack>
     <Footer/>
     </>
