@@ -1,23 +1,14 @@
-
-import Gt0 from '../assets/images/homepage/family-gathering-mobile@2x.jpg';
-import Gt1 from '../assets/images/homepage/family-gathering-tablet@2x.jpg';
-import Gt2 from '../assets/images/homepage/family-gathering-desktop@2x.jpg';
-
-import SpE0 from '../assets/images/homepage/social-events-mobile@2x.jpg';
-import SpE1 from '../assets/images/homepage/social-events-tablet@2x.jpg';
-import SpE2 from '../assets/images/homepage/social-events-desktop@2x.jpg';
-
-import SpEvents0 from '../assets/images/homepage/special-events-mobile@2x.jpg';
-import SpEvents1 from '../assets/images/homepage/special-events-tablet@2x.jpg';
-import SpEvents2 from '../assets/images/homepage/special-events-desktop@2x.jpg';
-
 import { Stack, Typography, Box, Button } from '@mui/material';
 import { useState, useEffect } from 'react';
 import ScrollReveal from "scrollreveal";
 
+import bankGalery from "../components/bankGalery";
+
 
 import {useNavigate } from "react-router-dom"
 export default function BookATableSection() {
+
+  const {Gt0 , Gt1, Gt2, SpE0, SpE1, SpE2, SpEvents0, SpEvents1, SpEvents2} = bankGalery;
 
   const Navigate = useNavigate()
   const [slideItem, setSlideItem] = useState('Slider-one')

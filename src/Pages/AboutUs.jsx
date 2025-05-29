@@ -1,12 +1,8 @@
 import { Box,  Stack, Typography } from "@mui/material";
 
-import CheepImage1 from '../assets/images/homepage/enjoyable-place-mobile@2x.jpg';
-import CheepImage3 from '../assets/images/homepage/enjoyable-place-desktop@2x.jpg';
 
-import FoodPlate1 from '../assets/images/homepage/locally-sourced-mobile@2x.jpg'
-import FoodPlate3 from '../assets/images/homepage/locally-sourced-desktop@2x.jpg'
 
-import Line from '../assets/images/patterns/pattern-lines.svg';
+import bankGalery from "../components/bankGalery";
 
 
 import ScrollReveal from "scrollreveal";
@@ -25,6 +21,8 @@ export default function AboutUs() {
    }, []) 
 
 
+   const {CheepImage1, CheepImage3,FoodPlate1, FoodPlate3, Line} = bankGalery
+
 
  
 
@@ -35,7 +33,7 @@ export default function AboutUs() {
 
 
        <Stack component='article'   display={'flex'}
-        flexDirection={{lg: 'row'}} sx={{position: 'relative', top: '-5em', left: {lg: '4.5em'},
+        flexDirection={{lg: 'row'}} sx={{position: 'relative', top: {xs: '-5em', sm: '-4.5em'} ,  left: {lg: '4.5em'},
           justifyContent:'center',  alignItems:'center'}} >
               <Box component='div' className='mobile reveal'  >
               <img src={CheepImage1} alt="" />

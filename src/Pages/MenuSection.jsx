@@ -2,18 +2,12 @@ import { Box, Stack, Typography } from "@mui/material";
 import ScrollReveal from "scrollreveal";
 import { useEffect } from "react";
 
-import Salmon0 from '../assets/images/homepage/salmon-mobile@2x.jpg';
-import Salmon1 from '../assets/images/homepage/salmon-desktop-tablet@2x.jpg';
-
-import Beef0 from '../assets/images/homepage/beef-mobile@2x.jpg';
-import Beef1 from '../assets/images/homepage/beef-desktop-tablet@2x.jpg';
-
-import Snack0 from '../assets/images/homepage/chocolate-mobile@2x.jpg';
-import Snack1 from '../assets/images/homepage/chocolate-desktop-tablet@2x.jpg';
-
+import bankGalery from "../components/bankGalery";
 
 
 export default function MenuSection() {
+
+    const {Salmon0, Salmon1,Beef0 , Beef1, Snack0, Snack1} = bankGalery ;
 
       useEffect(() => {
         ScrollReveal().reveal(".revealLeft", {

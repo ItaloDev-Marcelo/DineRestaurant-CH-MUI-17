@@ -3,17 +3,16 @@ import Footer  from '../Footer'
 import { AppBar, Stack, Box, Typography, Button} from '@mui/material'
 import Grid from '@mui/material/Grid2';
 import ScrollReveal from "scrollreveal";
-import Logo from '../../assets/images/logo.svg'
-import Line from '../../assets/images/patterns/pattern-lines.svg';
-import plus from '../../assets/images/icons/icon-plus.svg'
-import minus from '../../assets/images/icons/icon-minus.svg'
+import  useForm  from "react-hook-form";
 
-import {useNavigate } from "react-router-dom"
-import  {useForm }from "react-hook-form";
+
+import bankGalery from "../components/bankGalery";
 export default function bookYourTable()  {
+
+  const {logo, Line,  plus, minus} = bankGalery ;
   
-const Navigate = useNavigate()
-const {handleSubmit,register ,formState:{errors}, reset, watch} = useForm();
+const {handleSubmit,register ,formState:{errors}, reset} = useForm();
+
 const [howManyPeople, setHowManyPeople] = useState(1)
 
 const FormDataSubmit = () => {
@@ -37,7 +36,7 @@ const FormDataSubmit = () => {
     <Stack className='pt-1' component='Stack'>
         <Stack className='top-bg reveal'>
         <AppBar color='trasparent' position='static' sx={{display: {xs: 'none', md: 'block'}, boxShadow: 'none', paddingTop: '5em', paddingLeft: '10em'}} >
-                  <img src={Logo} alt=''/>
+                  <img src={logo} alt=''/>
          </AppBar>
         </Stack>
         
