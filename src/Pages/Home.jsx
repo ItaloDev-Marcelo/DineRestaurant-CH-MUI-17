@@ -1,28 +1,18 @@
 import {Stack, Box, AppBar, Typography, Button} from '@mui/material'
-import ScrollReveal from "scrollreveal";
-import { useEffect } from "react";
-import logo from '../assets/images/logo.svg';
+import bankGalery from '../components/bankGalery';
+import Img from '../components/image'
 
 
-import {useNavigate } from "react-router-dom"
+import {useNavigate } from 'react-router-dom'
 export default function Home() {
 
       const Navigate = useNavigate()
-
-   useEffect(() => {
-       ScrollReveal().reveal(".reveal", {
-         distance: "20px",
-         duration: 1000,
-         easing: "ease-in-out",
-         origin: "left",
-         reset: true, // Se quiser que a animação ocorra toda vez que o elemento entrar na tela
-       });
-      }, []) 
+        const {logo} = bankGalery
 
   return (
      <Stack className='Dine-home' component='header' position='relative'>
         <AppBar className='reveal home-element-1' color='trasparent' position='static' sx={{display: {xs: 'none', lg: 'block'}, boxShadow: 'none', paddingTop: '3em', paddingLeft: '10em'}} >
-           <img src={logo} alt=''/>
+           <Img url={logo} />
         </AppBar>
         <Box className='reveal home-element' sx={{color: 'white',maxWidth: {lg: '700px'}, padding: {xs: '4em'}, position: 'relative', top: {xs: '4em', sm: '20em',  lg: '1.5em'}, left: {lg: '5.5em'}, textAlign: {xs: 'center', lg: 'left'}}}>
            <Typography component='p' margin='1em 0'  display={{xs: 'block', lg: 'none'}}> <Typography component='strong' fontSize={{xs: '2em', sm: '3.5em'}}>dine</Typography>   </Typography>

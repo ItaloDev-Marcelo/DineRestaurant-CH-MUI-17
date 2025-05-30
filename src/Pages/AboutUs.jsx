@@ -1,33 +1,14 @@
-import { Box,  Stack, Typography } from "@mui/material";
-
-
-
-import bankGalery from "../components/bankGalery";
-
-
-import ScrollReveal from "scrollreveal";
-import { useEffect } from "react";
+import { Box,  Stack, Typography } from '@mui/material';
+import bankGalery from '../components/bankGalery';
+import  Img from '../components/image'
 
 export default function AboutUs() {
 
-   useEffect(() => {
-    ScrollReveal().reveal(".reveal", {
-      distance: "5px",
-      duration: 1000,
-      easing: "ease-in-out",
-      origin: "left",
-      reset: true, // Se quiser que a animação ocorra toda vez que o elemento entrar na tela
-    });
-   }, []) 
+   const {CheepImage1, CheepImage3, FoodPlate1, FoodPlate3, Line} = bankGalery
 
-
-   const {CheepImage1, CheepImage3,FoodPlate1, FoodPlate3, Line} = bankGalery
-
-
- 
-
+   
   return (
-    <Stack component='section' className="Travel-plates"
+    <Stack component='section' className='Travel-plates'
     padding={{xs: '1em', lg: '1em 5em'}} textAlign={{xs: 'center' , lg: 'left'}}
      >
 
@@ -36,13 +17,13 @@ export default function AboutUs() {
         flexDirection={{lg: 'row'}} sx={{position: 'relative', top: {xs: '-5em', sm: '-4.5em'} ,  left: {lg: '4.5em'},
           justifyContent:'center',  alignItems:'center'}} >
               <Box component='div' className='mobile reveal'  >
-              <img src={CheepImage1} alt="" />
+              <Img url={CheepImage1} />
               </Box>
               
               <Box  component='div' className='desktop reveal' >
-              <img src={CheepImage3} alt="" />
+              <Img url={CheepImage3} />
               </Box>
-          <Stack component='div' className="reveal" margin='1em 0' maxWidth='500px' position='relative' left={{lg: '-12em'}} >
+          <Stack component='div' className='reveal' margin='1em 0' maxWidth='500px' position='relative' left={{lg: '-12em'}} >
               <Box className='line-image' >
                  <Box className='bubble'>○</Box>
                  <Box className='line'></Box>
@@ -54,23 +35,23 @@ export default function AboutUs() {
        </Stack>
 
 
-       <Stack component='article' className="L1"  display='flex' flexDirection={{lg: 'row-reverse'}}   justifyContent={{xs: 'center', lg: 'flex-end'}} alignItems='center'   >
+       <Stack component='article' className='L1'  display='flex' flexDirection={{lg: 'row-reverse'}}   justifyContent={{xs: 'center', lg: 'flex-end'}} alignItems='center'   >
               <Box className='mobile reveal'>
-              <img src={FoodPlate1} alt="" />
+              <Img  url={FoodPlate1} />
               </Box>
 
 
               <Box className='line-L1' width='700px' display={{xs: 'none', md: 'block'}}>
-                <img src={Line} alt='' />
+                <Img  url={Line}  />
               </Box>
             
               <Box className='desktop reveal' position='relative' top={{md: '-7em', lg: '5em'}} right='-10em'>
-              <img src={FoodPlate3} alt="" />
+              <Img  url={FoodPlate3} />
               </Box>
 
              
 
-          <Stack component='div' className="reveal"  margin={{xs: '1em 0', lg: '0'}} maxWidth='500px'>
+          <Stack component='div' className='reveal'  margin={{xs: '1em 0', lg: '0'}} maxWidth='500px'>
               <Box className='line-image' position='relative'>
               <Box className='bubble'>○</Box>
               <Box className='line'></Box>

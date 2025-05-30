@@ -1,24 +1,16 @@
-import React, { useEffect } from 'react'
-import Logo from '../assets/images/logo.svg';
-
 import { Stack, Typography, Link } from '@mui/material';
-import ScrollReveal from "scrollreveal";
+import bankGalery from '../components/bankGalery';
+import  Img from '../components/image'
 export default function Rodape()  {
 
-   useEffect(() => {
-        ScrollReveal().reveal(".reveal", {
-          distance: "5px",
-          duration: 1000,
-          easing: "ease-in",
-          origin: "left",
-          reset: true, // Se quiser que a animação ocorra toda vez que o elemento entrar na tela
-        });
-       }, []) 
+
+  const {logo} = bankGalery
+   
     
   return (
     <Stack component='footer'  padding={{xs: '2em', lg: '4em 2em'}} sx={{background: 'hsl(0, 0.00%, 6.30%);',color: 'white', display: 'flex',textAlign: {xs: 'center', lg: 'left'}, flexDirection: {lg: 'row'}}} >
       <Stack component='div' className='reveal'  marginLeft={{xs: '7em' , md: '7em', lg: '6em'}} width={{xs: '30%',sm: '15%', lg: '10%'}} alignSelf={{xs: 'center', lg: 'flex-start'}} margin='1em 7em 0 5em'>
-        <img src={Logo} alt='logo' />
+        <Img url={logo}  />
       </Stack>
       <Stack display='flex' flexDirection={{xs: 'column', lg: 'row'}} >
       <Stack component='div'   className='address-area reveal ' margin='1em 0'>

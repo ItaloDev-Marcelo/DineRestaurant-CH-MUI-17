@@ -23,8 +23,7 @@ import logo from "../assets/images/logo.svg";
 import plus from '../assets/images/icons/icon-plus.svg'
 import minus from '../assets/images/icons/icon-minus.svg'
 
-export default [
-  {
+const bankGalery = {
     plus : plus ,
     minus : minus ,
     CheepImage1: CheepImage1,
@@ -48,5 +47,7 @@ export default [
     Beef1: Beef1,
     Snack0: Snack0,
     Snack1: Snack1,
-  },
-];
+  }
+
+
+export default bankGalery

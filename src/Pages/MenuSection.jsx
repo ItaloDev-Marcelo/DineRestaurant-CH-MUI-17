@@ -1,32 +1,12 @@
-import { Box, Stack, Typography } from "@mui/material";
-import ScrollReveal from "scrollreveal";
-import { useEffect } from "react";
-
-import bankGalery from "../components/bankGalery";
-
+import { Box, Stack, Typography } from '@mui/material';
+import bankGalery from '../components/bankGalery';
+import Img from '../components/image'
 
 export default function MenuSection() {
 
     const {Salmon0, Salmon1,Beef0 , Beef1, Snack0, Snack1} = bankGalery ;
 
-      useEffect(() => {
-        ScrollReveal().reveal(".revealLeft", {
-          distance: "5px",
-          duration: 1000,
-          easing: "ease-in-out",
-          origin: "left",
-          reset: true, // Se quiser que a animação ocorra toda vez que o elemento entrar na tela
-        });
-
-        ScrollReveal().reveal(".revealRight", {
-            distance: "5px",
-            duration: 2000,
-            easing: "ease-in-out",
-            origin: "right",
-            reset: true, // Se quiser que a animação ocorra toda vez que o elemento entrar na tela
-          });
-       }, []) 
-
+     
 
     return (
         <Stack display='flex' flexDirection={{xs: 'column', lg: 'row'}} sx={{background: '  #101010;',color: 'white', justifyContent: 'center', padding: {xs: '4em 1em', lg:  '10em 7em 2.5em 7em'}}}>
@@ -42,14 +22,14 @@ export default function MenuSection() {
             </Stack>
 
 
-            <Stack className="foodList" padding={{md: '4em 6em'}} display='flex' flexDirection='column'>
+            <Stack className='foodList' padding={{md: '4em 6em'}} display='flex' flexDirection='column'>
                 <Box className='revealRight' sx={{ display: 'flex', flexDirection: {xs: 'column', md: 'row'}, textAlign: {xs: 'center', md: 'left'} }}>
                     <Box className='image-container'>
                         <Box className='mobile' zIndex='2 ' position='relative'>
-                            <img src={Salmon0} alt="" />
+                            <Img url={Salmon0} alt='' />
                         </Box>
                         <Box className='tablet desktop ' zIndex='2' position='relative'>
-                            <img src={Salmon1} alt="" />
+                            <Img url={Salmon1} alt='' />
                         </Box>
                       
                     </Box>
@@ -62,10 +42,10 @@ export default function MenuSection() {
                 <Box className='revealRight' sx={{ display: 'flex',  flexDirection: {xs: 'column', md: 'row'}, textAlign: {xs: 'center', md: 'left'} }}>
                 <Box className='image-container'>
                         <Box className='mobile'  zIndex='2 ' position='relative'>
-                            <img src={Beef0} alt="" />
+                            <Img url={Beef0} alt='' />
                         </Box>
                         <Box className='tablet desktop'  zIndex='2 ' position='relative'>
-                            <img src={Beef1} alt="" />
+                            <Img url={Beef1} alt='' />
                         </Box>
                     
                     </Box>
@@ -78,10 +58,10 @@ export default function MenuSection() {
                 <Box className='revealRight' sx={{ display: 'flex', flexDirection: {xs: 'column', md: 'row'},textAlign: {xs: 'center', md: 'left'}  }}>
                 <Box className='image-container'>
                         <Box className='mobile'  zIndex='2 ' position='relative'>
-                            <img src={ Snack0} alt="" />
+                            <Img url={ Snack0} alt='' />
                         </Box>
                         <Box className='tablet desktop'   zIndex='2 ' position='relative'>
-                            <img src={ Snack1} alt="" />
+                            <Img url={ Snack1} alt='' />
                         </Box>
                     </Box>
                     <Box className='list-info'>

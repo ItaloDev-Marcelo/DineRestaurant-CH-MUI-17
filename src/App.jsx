@@ -1,12 +1,11 @@
 
 import './App.css'
-import MainPag from './Pages/nextPage/MainPa'
+import MainPag from './Pages/layout/index'
 import BookYourTable from './Pages/nextPage/bookYourTable'
-import { Navigate, Route, Routes } from "react-router-dom"
+import { Navigate, Route, Routes } from "react-router-dom";
 
 function App() {
   
-
   return (
     <>
      <Routes>

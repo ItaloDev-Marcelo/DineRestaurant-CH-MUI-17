@@ -1,44 +1,27 @@
 import { Stack, Typography, Box, Button } from '@mui/material';
-import { useState, useEffect } from 'react';
-import ScrollReveal from "scrollreveal";
+import { useState} from 'react';
+import bankGalery from '../components/bankGalery';
+import {useNavigate } from 'react-router-dom'
+import Img from '../components/image'
 
-import bankGalery from "../components/bankGalery";
 
-
-import {useNavigate } from "react-router-dom"
 export default function BookATableSection() {
-
   const {Gt0 , Gt1, Gt2, SpE0, SpE1, SpE2, SpEvents0, SpEvents1, SpEvents2} = bankGalery;
-
   const Navigate = useNavigate()
   const [slideItem, setSlideItem] = useState('Slider-one')
-
-     useEffect(() => {
-      ScrollReveal().reveal(".reveal", {
-        distance: "5px",
-        duration: 2000,
-        easing: "ease-in-out",
-        origin: "left",
-        reset: true, // Se quiser que a animação ocorra toda vez que o elemento entrar na tela
-      });
-     }, []) 
-  
-
-
-
   return (
     <Stack component='section' my='4em'  padding={{xs: '0' , lg: '4em 2.5em'}} display='flex' flexDirection={{xs: 'column', lg: 'row'}} >
       <Stack className='slideArea-section reveal'  component='div' display='flex'    textAlign={{xs: 'center', lg: 'left'}} position='relative' left={{lg: '5em' }}    >
        <Stack className='slideArea-01 ' display={slideItem === 'Slider-one'  ? 'flex' : 'none'} flexDirection={{xs: 'column', lg: 'row'}}  >
        <Stack component='picture' >
           <Box component='div' className='mobile '  >
-            <img src={Gt0} alt="" />
+            <Img url={Gt0}  />
           </Box>
           <Box component='div' className='tablet '  >
-            <img src={Gt1} alt="" />
+            <Img url={Gt1}  />
           </Box>
           <Box component='div' className='desktop ' >
-            <img src={Gt2} alt="" />
+            <Img url={Gt2}  />
           </Box>
         </Stack>
         
@@ -47,13 +30,13 @@ export default function BookATableSection() {
        <Stack className='slideArea-02 ' display={slideItem === 'Slider-two'  ? 'flex' : 'none'} flexDirection={{xs: 'column', lg: 'row'}}>
        <Stack component='picture' >
           <Box component='div' className='mobile '  >
-            <img src={SpEvents0} alt="" />
+            <Img url={SpEvents0}  />
           </Box>
           <Box component='div' className='tablet ' >
-            <img src={SpEvents1} alt="" />
+            <Img url={SpEvents1}  />
           </Box>
           <Box component='div' className='desktop ' >
-            <img src={SpEvents2} alt="" />
+            <Img url={SpEvents2}  />
           </Box>
         </Stack>
       
@@ -62,13 +45,13 @@ export default function BookATableSection() {
        <Stack className='slideArea-03 ' display={slideItem === 'Slider-three'  ? 'flex' : 'none'} flexDirection={{xs: 'column', lg: 'row'}}>
        <Stack component='picture' >
           <Box component='div' className='mobile '  >
-            <img src={SpE0} alt="" />
+            <Img url={SpE0}  />
           </Box>
           <Box component='div' className='tablet ' >
-            <img src={SpE1} alt="" />
+            <Img url={SpE1}  />
           </Box>
           <Box component='div' className='desktop ' >
-            <img src={SpE2} alt="" />
+            <Img url={SpE2}  />
           </Box>
         </Stack>
      
