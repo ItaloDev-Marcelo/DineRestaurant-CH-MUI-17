@@ -278,13 +278,6 @@ input[type='number']::placeholder {
 
 }
 
-@media (min-width: 480px) {
-
-  body  {
-    opacity: .5;
-  }
-
-}
 
 
 @media (min-width: 800px) {
