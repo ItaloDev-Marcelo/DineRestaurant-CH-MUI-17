@@ -16,8 +16,6 @@ const FormDataSubmit = () => {
 }
 
  
-
-        
   return (
     <>
     <Stack className='pt-1' component='Stack'>
@@ -47,7 +45,8 @@ const FormDataSubmit = () => {
         
         <Grid size={12}  className='area-1' >
               <label htmlFor='name'>
-              <input type='text' name='name' style={{borderColor: errors.name   ? ' #B54949' : '#242B37'}} {...register('name', { required: true  })}  id='name' placeholder='Name' /> 
+              <input type='text' name='name' style={{borderColor: errors.name   ? ' #B54949' : '#242B37'}} 
+              {...register('name', { required: true  })}  id='name' placeholder='Name' /> 
               </label>
               {errors.name ? <p className='error'>this fiel is required  </p> : null}
               </Grid>
@@ -68,15 +67,18 @@ const FormDataSubmit = () => {
                   <label>Pick a Date</label>
               </Grid>
                  <Grid size={{xs: 4, md: 4}}  padding={{xs: '0  2em 0  0', md:'0 2em' }}>
-                 <input type='number' name='mes'  style={{borderColor: errors.mes   ? ' #B54949' : '#242B37'}}  {...register('mes', { required: true  })}  id='mes' placeholder='MM'/>
+                 <input type='number' name='mes'  style={{borderColor: errors.mes   ? ' #B54949' : '#242B37'}}
+                   {...register('mes', { required: true  })}  id='mes' placeholder='MM'/>
                  {errors.mes ? <p className='error'> this fiel is required     </p> : null}
                  </Grid>
                  <Grid size={{xs: 4, md: 4}} padding={{xs: '0  2em 0  0', md:'0 3em 0 1em' }}>
-                 <input type='number' name='day'  style={{borderColor: errors.day   ? ' #B54949' : '#242B37'}}  {...register('day', { required: true  })} id='day' placeholder='DD'/>
+                 <input type='number' name='day'  style={{borderColor: errors.day   ? ' #B54949' : '#242B37'}} 
+                  {...register('day', { required: true  })} id='day' placeholder='DD'/>
                  {errors.day ? <p className='error'> this fiel is required    </p> : null}
                  </Grid>
                  <Grid size={{xs: 4, md: 2}} padding={{xs: '0 0 .5em 0', md:'0' }}>
-                 <input type='number' name='year'  style={{borderColor: errors.year   ? ' #B54949' : '#242B37'}}  {...register('year', { required: true  })} id='year' placeholder='YYYY'/>
+                 <input type='number' name='year'  style={{borderColor: errors.year   ? ' #B54949' : '#242B37'}} 
+                  {...register('year', { required: true  })} id='year' placeholder='YYYY'/>
                  {errors.year ? <p className='error'> this fiel is required    </p> : null}
                  </Grid>
   
@@ -90,11 +92,13 @@ const FormDataSubmit = () => {
                   <label>Pick a time</label>
               </Grid>
                  <Grid size={{xs: 4, md: 4}} padding={{xs: '0  2em 0  0', md:'0 2em' }}>
-                 <input type='number' name='hora'  {...register('hora', { required: true })} style={{borderColor: errors.hora   ? ' #B54949' : '#242B37'}}   maxLength='2'  id='hora' placeholder='09'/>
+                 <input type='number' name='hora'  {...register('hora', { required: true })} 
+                 style={{borderColor: errors.hora   ? ' #B54949' : '#242B37'}}   maxLength='2'  id='hora' placeholder='09'/>
                  {errors.hora ? <p className='error'> this fiel is required     </p> : null}
                  </Grid>
                  <Grid size={{xs: 4, md: 4}} padding={{xs: '0  2em 0  0', md:'0 3em 0 1em' }}>
-                 <input type='number' name='minuto'  {...register('minuto', { required: true  })} style={{borderColor: errors.minuto   ? ' #B54949' : '#242B37'}}  maxLength='2' placeholder='00'  id='minuto'/>
+                 <input type='number' name='minuto'  {...register('minuto', { required: true  })}
+                  style={{borderColor: errors.minuto   ? ' #B54949' : '#242B37'}}  maxLength='2' placeholder='00'  id='minuto'/>
                  {errors.minuto ? <p className='error'> this fiel is required     </p> : null}
                  </Grid>
                  <Grid size={{xs: 4, md: 2}} padding={{xs: '0 0 .5em 0', md:'0' }}>

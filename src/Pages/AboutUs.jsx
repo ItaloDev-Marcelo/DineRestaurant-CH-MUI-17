@@ -11,16 +11,15 @@ export default function AboutUs() {
     <Stack component='section' className='Travel-plates'
     padding={{xs: '1em', lg: '1em 5em'}} textAlign={{xs: 'center' , lg: 'left'}}
      >
-
-
        <Stack component='article'   display={'flex'}
-        flexDirection={{lg: 'row'}} sx={{position: 'relative', top: {xs: '-5em', sm: '-4.5em'} ,  left: {lg: '4.5em'},
+        flexDirection={{lg: 'row'}} sx={{position: 'relative', top: {xs: '-5em', sm: '-4.5em'}
+         ,  left: {lg: '4.5em'},
           justifyContent:'center',  alignItems:'center'}} >
               <Box component='div' className='mobile reveal'  >
               <Img url={CheepImage1} />
               </Box>
               
-              <Box  component='div' className='desktop reveal' >
+              <Box  component='div' className='desktop spacific-fix reveal' >
               <Img url={CheepImage3} />
               </Box>
           <Stack component='div' className='reveal' margin='1em 0' maxWidth='500px' position='relative' left={{lg: '-12em'}} >
