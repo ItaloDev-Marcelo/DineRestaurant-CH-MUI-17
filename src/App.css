@@ -9,8 +9,8 @@
 
 
 
-body .root {
-width: 100%;
+body {
+  max-width: 100%;
   overflow-x: hidden !important;
 }
 
