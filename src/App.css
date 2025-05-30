@@ -20,7 +20,7 @@ body .Dine-home {
   background-position: center;
   background-size: cover;
   height: 80vh;
-  width: 100%;
+  max-width: 100%;
 }
 
 h1 {
@@ -151,7 +151,7 @@ h4 {
   background-position: center;
   background-size: cover;
   height: 50vh;
-  width: 100%;
+  max-width: 100%;
 }
 
 .pt-1 {
@@ -160,7 +160,7 @@ h4 {
   background-position: center;
   background-size: cover;
   height: 100vh;
-  width: 100%;
+  max-width: 100%;
 }
 
 h5 {
