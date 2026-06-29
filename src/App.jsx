@@ -1,4 +1,3 @@
-
 import MainPag from './Pages/layout/index'
 import BookYourTable from './Pages/nextPage/bookYourTable'
 import { Navigate, Route, Routes } from "react-router-dom";
