@@ -4,7 +4,7 @@ import MenuSection from '../MenuSection'
 import MiddleSection from '../MiddleSection'
 import Rodape from '../Footer'
 import SlideContainer from '../../components/slide/SlideContainer'
-export default function MainPag()  {
+export default function MainPages()  {
 
      return (
        <>

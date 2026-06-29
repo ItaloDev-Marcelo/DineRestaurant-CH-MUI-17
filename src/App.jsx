@@ -1,4 +1,4 @@
-import MainPag from './Pages/layout/index'
+import MainPage from './Pages/layout/index'
 import BookYourTable from './Pages/nextPage/bookYourTable'
 import { Navigate, Route, Routes } from "react-router-dom";
 
@@ -11,7 +11,7 @@ function App() {
     },
     {
       path:'/DineHomePage',
-      element: <MainPag />
+      element: <MainPage />
     },
     {
       path:'/Book',
