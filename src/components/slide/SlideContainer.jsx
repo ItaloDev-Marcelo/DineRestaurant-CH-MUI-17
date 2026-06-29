@@ -9,7 +9,7 @@ const SlideContainer = () => {
     const nextSlide = (value) => setSlideItem(value)
     
   return (
-    <div className='py-20 md:py-40'>
+    <section className='py-20 md:py-40'>
         {
             slideDate.map((item) => (
                 <Slide key={item.id} NextSlide={nextSlide}
@@ -18,7 +18,7 @@ const SlideContainer = () => {
                  />
             ))
         }
-    </div>
+    </section>
   )
 }
 

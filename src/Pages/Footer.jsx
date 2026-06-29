@@ -1,29 +1,32 @@
-import { Stack, Typography, Link } from '@mui/material';
-import bankGalery from '../components/bankGalery';
-import  Img from '../components/image'
+
 export default function Rodape()  {
-
-
-  const {logo} = bankGalery
-   
     
   return (
-    <Stack component='footer'  padding={{xs: '2em', lg: '4em 2em'}} sx={{background: 'hsl(0, 0.00%, 6.30%);',color: 'white', display: 'flex',textAlign: {xs: 'center', lg: 'left'}, flexDirection: {lg: 'row'}}} >
-      <Stack component='div' className='reveal'  marginLeft={{xs: '7em' , md: '7em', lg: '6em'}} width={{xs: '30%',sm: '15%', lg: '10%'}} alignSelf={{xs: 'center', lg: 'flex-start'}} margin='1em 7em 0 5em'>
-        <Img url={logo}  />
-      </Stack>
-      <Stack display='flex' flexDirection={{xs: 'column', lg: 'row'}} >
-      <Stack component='div'   className='address-area reveal ' margin='1em 0'>
-         <Typography component='p' marginBottom='.2em'>Marthwaite, Sedbergh</Typography>
-         <Typography component='p' marginBottom='.3em'>Cumbria</Typography>
-         <Link href='tel:+00441234567' sx={{textDecoration: 'none', color: '#fff'}}  >00 44 123 4567</Link>
-      </Stack>
-      <Stack component='div' className='reveal'  margin={{xs: '1em 0', lg: '1em 1.5em 0 5em'}}>
-            <Typography component='p' marginBottom='.7em'>Open Times</Typography>
-            <Typography component='p'>Mon - Fri: 09:00 AM - 10:00 PM</Typography>
-            <Typography component='p'>Sat - Sun: 09:00 AM - 11:30 PM</Typography>
-      </Stack>
-      </Stack>
-    </Stack>
+    <footer className='p-4 py-10 xl:py-9  gap-10 bg-[#101010] text-white flex flex-col xl:flex-row text-center xl:text-justify xl:items-center xl:justify-between xl:px-20'>
+   
+      <div className='flex flex-row justify-center'>
+        <p className='text-[4em] mt-10 xl:mt-0'>dine</p>
+      </div>
+      
+      <div className='flex flex-col xl:flex-row my-1 xl:my-0'>
+     
+        <div>
+           <p className='mb-[.2em]'>Marthwaite, Sedbergh</p>
+         <p  className='mb-[.3em]'>Cumbria</p>
+         <a href='tel:+00441234567'className='text-white no-underline'>00 44 123 4567</a>
+
+        </div>
+      </div>
+
+
+      <div className='flex flex-col xl:flex-row'>
+         <div className='m-[1em] xl:m-[1em 1.5em 0 5em]'>
+            <p className='text-[.7em]'>Open Times</p>
+            <p>Mon - Fri: 09:00 AM - 10:00 PM</p>
+            <p>Sat - Sun: 09:00 AM - 11:30 PM</p>
+      </div>
+      </div>
+
+    </footer>
   )
 }
