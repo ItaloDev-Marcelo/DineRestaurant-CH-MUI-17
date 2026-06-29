@@ -2,8 +2,8 @@ import Home from '../Home'
 import AboutUs from '../AboutUs'
 import MenuSection from '../MenuSection'
 import MiddleSection from '../MiddleSection'
-import BookATableSection from '../BookATableSection'
 import Rodape from '../Footer'
+import SlideContainer from '../../components/slide/SlideContainer'
 export default function MainPag()  {
 
      return (
@@ -12,7 +12,7 @@ export default function MainPag()  {
         <main>
            <AboutUs/>
            <MenuSection/>
-           <BookATableSection/>
+           <SlideContainer/>
            <MiddleSection/>
         </main>
         <Rodape/>
