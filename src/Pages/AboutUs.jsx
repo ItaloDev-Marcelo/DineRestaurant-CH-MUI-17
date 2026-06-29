@@ -1,65 +1,60 @@
 import { Box,  Stack, Typography } from '@mui/material';
-import bankGalery from '../components/bankGalery';
-import  Img from '../components/image'
+import LineRow from '../components/LineRow';
+import { AboutData } from '../data/aboutData';
+import { communData } from '../data/communData';
 
 export default function AboutUs() {
 
-   const {CheepImage1, CheepImage3, FoodPlate1, FoodPlate3, Line} = bankGalery
+   const {Line} = communData
+   const {EnjoyablePlace1,
+       EnjoyablePlace2,
+       LocallySourced1,
+       LocallySourced2} = AboutData
 
    
   return (
-    <Stack component='section' className='Travel-plates'
-    padding={{xs: '1em', lg: '1em 5em'}} textAlign={{xs: 'center' , lg: 'left'}}
+    <section className='px-10 py-25 xl:py-30 md:px-26  lg:px-[5em] text-center lg:text-justify'
      >
-       <Stack component='article'   display={'flex'}
-        flexDirection={{lg: 'row'}} sx={{position: 'relative', top: {xs: '-5em', sm: '-4.5em'}
-         ,  left: {lg: '4.5em'},
-          justifyContent:'center',  alignItems:'center'}} >
-              <Box component='div' className='mobile reveal'  >
-              <Img url={CheepImage1} />
-              </Box>
-              
-              <Box  component='div' className='desktop spacific-fix reveal' >
-              <Img url={CheepImage3} />
-              </Box>
-          <Stack component='div' className='reveal' margin='1em 0' maxWidth='500px' position='relative' left={{lg: '-12em'}} >
-              <Box className='line-image' >
-                 <Box className='bubble'>○</Box>
-                 <Box className='line'></Box>
-              </Box>
-              <Typography component='h2' fontSize={{xs: '2em',md: '3em', lg: '3.2em'}} padding='0 1.5em' margin='.5em 0 1em 0'>Enjoyable place for all the family </Typography>
-              <Typography component='p' color='#4C4C4' padding={{xs: '0 1.4em', md: '0 3.5em', lg: '0 4em'}} margin={{xs: '.5em 0 .5em 0', lg: '-1.5em 0 .5em .5em'}} fontSize={{xs: '1.3em', sm: '1.1em'}}  >Our relaxed surroundings make dining with us a great experience for everyone. We can even arrange 
-              a tour of the farm before your meal.</Typography>
-          </Stack>
-       </Stack>
+
+       <section className='flex flex-col pb-20 xl:my-0 xl:flex-row justify-center items-center gap-5 xl:mt-5 xl:px-10 relative xl:top-7 lg:justify-start '>
+              <div className='hidden xl:block absolute  w-170 top-50 -left-20 h-95 bg-gray-100'>
+              </div>
+              <div  className='mobile relative-top-5 xl:top-10 p-5 xl:p-2 left-0'  >
+              <img src={EnjoyablePlace1} alt='' className='xl:hidden' />
+              <img src={EnjoyablePlace2} alt='' className='hidden xl:block w-[60%] relative z-1000' />
+              </div>
+          <div className='py-10'>
+              <LineRow color='text-red-900'/>
+              <h3 className='text-[2em] leading-15 xl:leading-15 md:leading-10 md:py-10 xl:pb-0  md:text-[2.5em] md:px-20 xl:px-0 xl:text-[3.2em]'>Enjoyable place for all the family </h3>
+              <p className='text-[#4C4C4] mx-[1.4em] md:mx-[3.5em] md:text-[1.3em] xl:text-[1em] xl:mx-0'>Our relaxed surroundings make dining with us a great experience for everyone. <br className=' hidden xl:block'/> We can even arrange 
+              a tour of the farm before your meal.</p>
+          </div>
+       </section>
 
 
-       <Stack component='article' className='L1'  display='flex' flexDirection={{lg: 'row-reverse'}}   justifyContent={{xs: 'center', lg: 'flex-end'}} alignItems='center'   >
-              <Box className='mobile reveal'>
-              <Img  url={FoodPlate1} />
-              </Box>
 
-
-              <Box className='line-L1' width='700px' display={{xs: 'none', md: 'block'}}>
-                <Img  url={Line}  />
-              </Box>
+       <section className='flex flex-col xl:flex-row-reverse justify-between items-center   xl:mt-10 xl:px-10 relative xl:top-14 xl:left-10 lg:justify-start'  >
+              <div className='relative'>
+              <img  src={LocallySourced1} alt='' className='xl:hidden'/>
+              <img  src={LocallySourced2} alt='' className='hidden relative z-1 xl:block xl:left-50 w-[60%]'  />
+              <img  src={Line} alt='' className='hidden xl:block absolute top-[75%] left-120 z-10'  />
             
-              <Box className='desktop reveal' position='relative' top={{md: '-7em', lg: '5em'}} right='-10em'>
-              <Img  url={FoodPlate3} />
-              </Box>
+              <div className='hidden xl:block absolute w-170 top-50 xl:left-10 h-95 rounded-tl-[100px] bg-gray-100'>
+              </div>
 
-             
+              </div>
 
-          <Stack component='div' className='reveal'  margin={{xs: '1em 0', lg: '0'}} maxWidth='500px'>
-              <Box className='line-image' position='relative'>
-              <Box className='bubble'>○</Box>
-              <Box className='line'></Box>
-              </Box>
-              <Typography component='h2' fontSize={{xs: '2em',md: '3em', lg: '3em'}} padding='0 1.5em' margin='1em 0'>The most locally sourced food</Typography>
-              <Typography component='p' color='#4C4C4' padding={{xs: '0 1.4em', md: '0 3.5em' , lg: '0 4em'}} margin={{xs: '.5em 0', lg: '-1.5em 0 .5em 0'}}  fontSize={{xs: '1.3em', sm: '1.2em'}} >All our ingredients come directly from our farm or local fishery. So you can be sure that you’re 
-              eating the freshest, most sustainable food.</Typography>
-          </Stack>
-       </Stack>
-    </Stack>
+          <div className='py-10 xl:pl-2 md:px-25 xl:px-0'>
+              <LineRow color='text-red-900' />
+              <h3 className='text-[2em] xl:text-[3.2em] text-center xl:text-left
+              xl:leading-15 md:leading-10 md:py-10 xl:pb-0  md:text-[2.5em]
+              '>The most locally sourced food</h3>
+              <p className='text-[#4C4C4]'>All our ingredients come directly from our farm or local fishery.  So you can be sure that you’re 
+              eating the freshest,  <br className=' hidden xl:block'/> most sustainable food.</p>
+          </div>
+
+       </section>
+
+    </section>
   )
 }
