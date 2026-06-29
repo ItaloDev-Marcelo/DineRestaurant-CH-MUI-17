@@ -1,13 +1,12 @@
-
-import bankGalery from '../components/bankGalery';
-import Img from '../components/image'
 import Button from '../components/Button';
 import DinnerHeroMobile from '../assets/images/homepage/hero-bg-mobile@2x.jpg'
 import DinnerHeroTablet from '../assets/images/homepage/hero-bg-tablet@2x.jpg'
 import DinnerHeroDesktop from '../assets/images/homepage/hero-bg-desktop@2x.jpg'
+import { communData } from '../data/communData';
+
 export default function Home() {
 
-        const {logo} = bankGalery
+        const {Logo} = communData
       
         
 
@@ -20,7 +19,7 @@ export default function Home() {
       
           <div className='relative z-10 -top-3 lg:-top-7 xl:-top-3 p-10 md:py-20 md:-top-5' >
          <nav className='p-10 hidden md:block'>
-           <a href='index.html'><img src={logo} alt='logo' /></a>
+           <a href='index.html'><img src={Logo} alt='logo' /></a>
         </nav>
         <div className='flex flex-col justify-center items-center  gap-2 md:gap-7 lg:gap-5 lg:items-start text-center lg:text-justify relative  top-40  md:px-10 xl:top-2'>
            <h1 className='text-white pb-2.5 md:hidden'><strong className='text-[1.5em]'>dine</strong></h1>
