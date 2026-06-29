@@ -5,7 +5,7 @@ import SlideBtn from  '../slide/Slidebtn'
 
 const Slide = ({title,text,images, NextSlide, next,options}) => {
     const Navigate = useNavigate() 
-    console.log(title,next)
+    
   return (
     <section className={title == next ? 'flex flex-col xl:flex-row justify-center xl:p-10 content-center' : 'hidden'}>
          <div className='my-5 relative xl:-left-20 xl:pr-20 flex flex-col items-center'>
