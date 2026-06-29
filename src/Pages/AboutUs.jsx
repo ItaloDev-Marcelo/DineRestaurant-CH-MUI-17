@@ -1,4 +1,3 @@
-import { Box,  Stack, Typography } from '@mui/material';
 import LineRow from '../components/LineRow';
 import { AboutData } from '../data/aboutData';
 import { communData } from '../data/communData';

@@ -1,4 +1,4 @@
-import {Stack, Box, AppBar, Typography} from '@mui/material'
+
 import bankGalery from '../components/bankGalery';
 import Img from '../components/image'
 import Button from '../components/Button';
